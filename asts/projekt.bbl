@@ -1,0 +1,45 @@
+\begin{thebibliography}{1}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{doi:\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+\providecommand{\selectlanguage}[1]{\relax}
+\providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem{Standard}
+IEEE Standard for Software and System Test Documentation. \emph{IEEE Std
+  829-2008}, July 2008: s. 1--150, \doi{10.1109/IEEESTD.2008.4578383}.
+
+\bibitem{Ist}
+Ammann, P.; Offutt, J.: \emph{\it Introduction to Software Testing}. Cambridge
+  University Press, 2008, ISBN 978-0-511-39330-3.
+
+\bibitem{Dig}
+Emmi, M.; Majumdar, R.; Sen, K.: \it Dynamic Test Input Generation for Database
+  Applications. In \emph{Proceedings of the 2007 International Symposium on
+  Software Testing and Analysis}, ISSTA '07, New York, NY, USA: ACM, 2007, ISBN
+  978-1-59593-734-6, s. 151--162.
+\newline\urlprefix\url{http://doi.acm.org/10.1145/1273463.1273484}
+
+\bibitem{Gst}
+Hass, A. M.~J.: \emph{\it Guide to Advanced Software Testing}. Artech House,
+  2008, ISBN 978-1-59693-285-2.
+
+\bibitem{Ast}
+Myers, G.~J.; Badgett, T.; Sandler, C.: \emph{\it The Art of Software Testing}.
+  John Wiley, \it 3 vydanie, 2011, ISBN 978-1-118-03196-4.
+
+\bibitem{Testos}
+Testos: {\it Domovská stránka projektu Testos}. FIT VUT v Brne, 2018,
+  [Online; navštívené 30.12.2018].
+\newline\urlprefix\url{http://testos.org}
+
+\bibitem{Tgp}
+Zhao, R.; Li, Z.; Wang, Q.: Test Generation for Programs with Binary Tree
+  Structure as Input. \emph{International Journal of Software Engineering and
+  Knowledge Engineering}, ro\v{c}n\'{i}k~25, \v{c}.~07, 2015: s. 1129--1151.
+\newline\urlprefix\url{https://doi.org/10.1142/S0218194015500205}
+
+\end{thebibliography}
