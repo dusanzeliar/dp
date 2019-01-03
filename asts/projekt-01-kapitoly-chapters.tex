@@ -40,11 +40,32 @@ Systémové testovanie je zamerané na nájdenie chýb vo vlastnostiach plne int
 \subsection*{Akceptačné testovanie}
 Akceptačné testovanie je proces s účelom overenia softvéru voči počiatočným stanoveným požiadavkom zákazníka jeho aktuálnych potrebieb. Často sa na ich vytváraní podieľa expert na doménu, pre ktorý sa softvér vyvýja. Zvyčajne je vytvorený zákazníkom alebo koncovým užívateľom a overuje, že dané riešenie pre užívateľa funguje \cite{Ast}.  
 
-\section{Druhy testovania}
 \section{Dynamické testovanie}
-\section{Testovanie založené na modeli}
-\section{Testovanie založené na dátach}
+Existuje mnoho prístupov k testovaniu softvéru. Na najvyššej úrovni sa testovanie rozdeľuje na {\it statické} a {\it dynamické} \cite{Ist}. Techniky, ktoré analyzujú a skúmajú program bez nutnotsti jeho spusteniam za účelom verifikácie spadajú do skupiny statického testovania. Zahňuje posudzovanie dokumentov, kódu a jeho statickú analýzu (základná statická analýza zvyčajne prebieha na úrovni kompilátorov). Druhá skupina techník spadá do skupiny dynamického testovania, ktorá je zameraná na analýzu dynamického správania kôdu s cieľom jeho validácie. Prerekvizitou je úspešná kompilácia a spustenie kódu. Zahrňuje prácu so softvérom, kedy pre špecifické vstupy overuje a analyzuje správnosť výstupov.
+
+ Dynamické testovanie môže byť ďalej rozdelené na {\it funkcionárne} a {\it nefukncionárne}. Kým funkcionárne testovanie adresuje splňenie požiadaviek, nefukcionárne je mierené na ostatné oblasti ako bezpečnosť, výkonnosť, použiteľnosť, správa pamäti a iné. Podľa znalosti kôdu sa delí na {\it black-box, white-box a grey-box} testovanie.
+ 
+  Táto práca sa zamerieva na funkcionálne, black-box testovanie, ale výsledný nástroj môže byť prínosný aj pre iné prístupy.
+
+       
+\subsection*{Black-box testovanie}
+Black-box testovanie zoskupuje funkcionálne techniky tvorby testovacích prípadov na základe špecifikácií vytvárajúce testovacie prípady podľa analýzi popisu produktu bez znalosti jeho vnútornej štruktúry. Ich hlavným zameraním je testovanie funkcionality. Závisia na popise očakávaní od testovaného softvéru napríklad vo forme manuálu či popisu procesu.
+
+Black-box testovanie môže byť využité na všetkých úrovniach testovania. Pre nižšie úrovne jednotkového a integračného testovania sa dá využiť ako počiatočný bod pre tvorbu testov na základe dizajnu alebo aj požiadaviek. Veľmi užitočné sú na vyžších úrovniach, teda systémová a akceptačná, kde sú testy založené na požiadavkách  \cite{Gst}.
+
+\subsection*{White-box testovanie}
+Techniky white-box testovania vytvárajú testovacie prípady podľa vnútornej štruktúry komponenty alebo systému. Hlavný dôraz kladú na vetvy, jednotlivé podmienky a výrazy tradične v zdrojovom kóde. Primárne sa využívajú v jednotkovom a integračnom testovaní. Všetky testovacie techniky tohoto druhu od testera vyžadujú znalosť danej štruktúry, teda programovacieho jazyka \cite{Gst}.    
+\subsection*{Grey-box testovanie}
+Mezi white-box a black-box testovaním je mnoho úrovní grey-box testovania ktoré predstavuje ich kombináciu. Testovacie prípady sú tvorené so znalosťou architektúry, algoritmov, vnútorných stavov alebo iného vysoko úrovňového popisu správania.
+\section{Ekvivalenčné triedy}
 \section{Rozhodovacia tabuľka}
+\section{Cause effect graph}
+\section{Testovanie založené na dátach}
+\section{Generovanie testovacích dát}
+{TODO {\it Kritérium pokrytia} je pravidlo alebo predpis pre systematické generovanie požiadavkov na test. {\it Pokrytie} je miera, udávajúca ako dobre je dané krytérium
+	
+	
+	Techniky black-box testovania majú asociované {\it kritéria pokytia}, kde aplikácia jednotlivých techník konkretizuje ich kritérium pokrytia z kritéria pokrytia požiadavkov na špecifické kritérium pre danú techniku.}  
 
 \noindent Za prvé – na abstraktu záleží. Za druhé – není těžké ho napsat. Pojďme na to.
 
