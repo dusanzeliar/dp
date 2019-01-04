@@ -45,11 +45,11 @@ Existuje mnoho prístupov k testovaniu softvéru. Na najvyššej úrovni sa test
 
  Dynamické testovanie môže byť ďalej rozdelené na {\it funkcionárne} a {\it nefukncionárne}. Kým funkcionárne testovanie adresuje splňenie požiadaviek, nefukcionárne je mierené na ostatné oblasti ako bezpečnosť, výkonnosť, použiteľnosť, správa pamäti a iné. Podľa znalosti kôdu sa delí na {\it black-box, white-box a grey-box} testovanie.
  
-  Táto práca sa zamerieva na funkcionálne, black-box testovanie, ale výsledný nástroj môže byť prínosný aj pre iné prístupy.
+  Táto práca sa zamerieva na testovanie založené na dátach, ktoré vychádza z funkcionálneho black-box testovania, ale výsledný nástroj môže byť prínosný aj pre iné prístupy.
 
        
 \subsection*{Black-box testovanie}
-Black-box testovanie zoskupuje funkcionálne techniky tvorby testovacích prípadov na základe špecifikácií vytvárajúce testovacie prípady podľa analýzi popisu produktu bez znalosti jeho vnútornej štruktúry. Ich hlavným zameraním je testovanie funkcionality. Závisia na popise očakávaní od testovaného softvéru napríklad vo forme manuálu či popisu procesu.
+{\it Black-box testovanie} (tiež známe ako {\it testovanie založené na dátach}) zoskupuje techniky tvorby testovacích prípadov na základe špecifikácií podľa analýzi popisu softvéru bez znalosti jeho vnútornej štruktúry  \cite{Ast}. Ich hlavným zameraním je odhalenie okoľností, pri ktorých sa systém správa odlišne od špecifikácií.  Testovacie dáta závisia na popise očakávaní od testovaného softvéru napríklad vo forme manuálu či popisu procesu.
 
 Black-box testovanie môže byť využité na všetkých úrovniach testovania. Pre nižšie úrovne jednotkového a integračného testovania sa dá využiť ako počiatočný bod pre tvorbu testov na základe dizajnu alebo aj požiadaviek. Veľmi užitočné sú na vyžších úrovniach, teda systémová a akceptačná, kde sú testy založené na požiadavkách  \cite{Gst}.
 
@@ -57,7 +57,39 @@ Black-box testovanie môže byť využité na všetkých úrovniach testovania. 
 Techniky white-box testovania vytvárajú testovacie prípady podľa vnútornej štruktúry komponenty alebo systému. Hlavný dôraz kladú na vetvy, jednotlivé podmienky a výrazy tradične v zdrojovom kóde. Primárne sa využívajú v jednotkovom a integračnom testovaní. Všetky testovacie techniky tohoto druhu od testera vyžadujú znalosť danej štruktúry, teda programovacieho jazyka \cite{Gst}.    
 \subsection*{Grey-box testovanie}
 Mezi white-box a black-box testovaním je mnoho úrovní grey-box testovania ktoré predstavuje ich kombináciu. Testovacie prípady sú tvorené so znalosťou architektúry, algoritmov, vnútorných stavov alebo iného vysoko úrovňového popisu správania.
-\section{Ekvivalenčné triedy}
+\section{Testovanie založené na dátach}
+Jednoduché automatizované testovacie skripty obsahujú pevne dané testovacie dáta. Zmena týchto dát obvykle vyžaduje zmenu v zdrojovom kóde skriptu, čo môže viesť k viacerím komplikáciám. Ak je test neprehľadný, dlhý alebo neštrukturovaný, jednoduchá zmena v dátach je náročná aj pre skúsených expertov. Rovnako vzniká riziko zavedenia novej chyby. Pri tvorbe nových testov, líšiacich sa len v testovacích dátach, často dochádza k skopírovaniu kódu a následnej modifikácii dát. Pritom vzniká duplicita kódu a testovacie prípady sú ťažko udržateľné. 
+
+Pri veľkých testovacích sadách sú pre spomenuté problémy skripty s pevne danými dátami len ťažko použiteľné. {\it Testovanie založené na dátach (Data-driven testing)} je metodológia , v ktorej sa opakovane vykonávajú rovnaké kroky skriptu s použitím externých dátových zdrojov. Takéto dáta musia byť ľahko editovateľné aj testerom bez znalosti zdrojového kódu. Umožňuje mu tým sústrediť sa len na tvorbu testovacích prípadov. Výhody metodológie sú zreteľné najmä pri aplikáciách s častými zmenami funkcionality. Hlavné výhody sú nasledovné \cite{Sttc}:
+\begin{itemize}
+	\item{Testy založené na dátach dosahujú vysoké pokrytie kódu testovacími prípadmi a zároveň minimalizujú množstvo kódu, ktoré je potrebné napísať a udržiavať}
+	\item{Uľahčuje vytváranie a spúšťanie veľkého množstva testovacích podmienok}
+	\item{Testovacie dáta môžu byť navrhnuté a vytvorené pred tým, ako je aplikácia pripravená na testovanie}
+	\item{Rozhodovacie dátové tabuľky môžu byť použité pri manuálnom testovaní}
+\end{itemize}
+\begin{figure*}[h]\centering
+	\centering
+	\includegraphics[width=3.5in,height=2.2in]{obrazky-figures/Data-driven_testing.png}\\[1pt]
+	\caption{Diagram záladnej štruktúry testovania založeného na dátach .}
+	\label{Tdd_img}
+\end{figure*}
+\section{Editácia a uloženie testovacích dát}
+Využívané testovacie dáta sa obecne skladajú z kombinácie vstupných a očakávaných výstupných dát. Daný typ dát sa najlepšie popisuje formou {\it rozhodovacích tabuliek}. Rozhodovacia tabuľka v najjednoduchšej forme poskytuje vstupy ako aj očakávané výstupy na jednom riadku. Pri tvorbe tabuľky je dôležitá správna identifikácia všetkých vstupných dát a ich rozdelenie do {\it domén}. Výber konkrétnych hodnôt záleží od zvoleného prístupu, najčastejšie na základe {\it analýzy hraničných hodnôt} a {\it rozdelenia na evivalenčné triedy}. 
+
+Vzhľadom k charakteru dát sa k ich editácii prirodzene ponúka využitie tabuľkových procesorov (anglicky{\it spreadsheet}). Prácu s danými programmi obvykle zvládajú testeri ako aj ľudia z oblasti biznisu, čo uľahčuje ich rýchle zapojenie. Dané programy sa často používajú aj na jednoduchý manažment testov pre manuálne testovanie. V tomto prípade sa dáta môžu zdieľať s automatizovanými testami a predchádať tak ich zbytočnej redundancii. Príklad tabuľky je uvedený na obrázku \ref{Dt_img}. 
+\begin{figure*}[h]\centering
+	\centering
+	\includegraphics[width=6.0in,height=2.2in]{obrazky-figures/decision_table.png}\\[1pt]
+	\caption{Príklad rozhodovacej tabuľky pre uplatnenie zľavy vytvorenej v tabuľkovom editore.}
+	\label{Dt_img}
+\end{figure*}
+
+Formáty uloženia tabuliek spadajú do viacerých kategórií. Prostý databázový soubor (anglicky flat file database) je jednoduchá databáza (väčšinou tabulka) uložená v textovom súbore ve forme prostého textu. Obvykle používané formáty sú napríklad hodnoty oddelené čiarkami (CSV), hodnoty oddelené tabulátormi (CSV, TXT) alebo iný špecifický formát (variácie XLS). Rovnako sú stále viac využívané štrukturované formáty ako XML a Json. Súčasné programovacie jazyky majú knižnice pre ich načítanie a spracovanie, čo výrazne uľahčuje ich využitie. Prosté dabázové súbory môžu mať problémy pri výraznom rozšírovaní. Rovnako je v nich neprehľadné uchovávanie rôznych konfigurácií a verzií. 
+
+Pre veľké množstvo testovacích dát je vhodné využitie relačnej databázy. Umožňuje editáciu prostredníctvom skriptov ako aj pomocou grafických editorov.       
+ 
+\section{Rozdelenie vstupných domén na ekvivalenčné triedy}
+Zmyslom tvorby testovacích prípadov je nájdenie 
 \section{Rozhodovacia tabuľka}
 \section{Cause effect graph}
 \section{Testovanie založené na dátach}
@@ -66,6 +98,16 @@ Mezi white-box a black-box testovaním je mnoho úrovní grey-box testovania kto
 	
 	
 	Techniky black-box testovania majú asociované {\it kritéria pokytia}, kde aplikácia jednotlivých techník konkretizuje ich kritérium pokrytia z kritéria pokrytia požiadavkov na špecifické kritérium pre danú techniku.}  
+
+Základné techniky black-box testovania sú nasledovné:
+\begin{itemize}
+	\item{Rozdelenie vstupných domén na ekvivalenčné triedy}
+	\item{Cause-effect graf}
+	\item{Rozhodovacie tabuľky}
+	\item{Rozhodovacia tabuľka}
+	\item{Provedeným výzkumem jsme zjistili, že.}
+\end{itemize}
+
 
 \noindent Za prvé – na abstraktu záleží. Za druhé – není těžké ho napsat. Pojďme na to.
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.13)  1 JAN 2019 15:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.13)  4 JAN 2019 11:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1369,7 +1369,7 @@ File: t1qhv.fd 2009/09/25 v1.2 font definition file for T1/qhv
 \@vyskaobr=\skip83
 \@sirkaobr=\skip84
 
-<template-fig/VUT_symbol_barevne_CMYK_CZ.pdf, id=105, 167.13641pt x 165.87971pt
+<template-fig/VUT_symbol_barevne_CMYK_CZ.pdf, id=117, 167.13641pt x 165.87971pt
 >
 File: template-fig/VUT_symbol_barevne_CMYK_CZ.pdf Graphic file (type pdf)
  <use template-fig/VUT_symbol_barevne_CMYK_CZ.pdf>
@@ -1455,126 +1455,147 @@ Kapitola 2.
 [4
 
 ] [5]
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 73.
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 65.
  (/usr/share/texmf/tex/latex/lm/omslmr.fd
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 73.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 65.
 
 
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 73.
- [6] [7] [8]
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 65.
+
+<obrazky-figures/Data-driven_testing.png, id=249, 372.39125pt x 234.8775pt>
+File: obrazky-figures/Data-driven_testing.png Graphic file (type png)
+
+<use obrazky-figures/Data-driven_testing.png>
+Package pdftex.def Info: obrazky-figures/Data-driven_testing.png used on input 
+line 72.
+(pdftex.def)             Requested size: 252.94995pt x 158.9942pt.
+ [6 <./obrazky-figures/Data-driven_testing.png>]
+<obrazky-figures/decision_table.png, id=260, 1058.95625pt x 351.3125pt>
+File: obrazky-figures/decision_table.png Graphic file (type png)
+
+<use obrazky-figures/decision_table.png>
+Package pdftex.def Info: obrazky-figures/decision_table.png used on input line 
+82.
+(pdftex.def)             Requested size: 433.62549pt x 158.99509pt.
+
+Overfull \hbox (1.14369pt too wide) in paragraph at lines 82--82
+ [][] 
+ []
+
+[7 <./obrazky-figures/decision_table.png>] [8] [9] [10]
 Kapitola 3.
 
-LaTeX Warning: Citation `Cernocky' on page 9 undefined on input line 132.
+LaTeX Warning: Citation `Cernocky' on page 11 undefined on input line 194.
 
 
-LaTeX Warning: Citation `fitWeb' on page 9 undefined on input line 140.
+LaTeX Warning: Citation `fitWeb' on page 11 undefined on input line 202.
 
 
-LaTeX Warning: Citation `Rybicka' on page 9 undefined on input line 140.
+LaTeX Warning: Citation `Rybicka' on page 11 undefined on input line 202.
 
-[9
+[11
 
 ]
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 148.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 210.
 
  (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [10]
+) [12]
 
-LaTeX Warning: Citation `Herout' on page 11 undefined on input line 184.
+LaTeX Warning: Citation `Herout' on page 13 undefined on input line 246.
 
-[11]
+[13]
 
-LaTeX Warning: Citation `Herout' on page 12 undefined on input line 215.
-
-
-LaTeX Warning: Citation `Lebrun2011' on page 12 undefined on input line 215.
+LaTeX Warning: Citation `Herout' on page 14 undefined on input line 277.
 
 
-LaTeX Warning: Citation `Zemcik' on page 12 undefined on input line 215.
-
-[12]
-
-LaTeX Warning: Citation `Beran' on page 13 undefined on input line 242.
+LaTeX Warning: Citation `Lebrun2011' on page 14 undefined on input line 277.
 
 
-LaTeX Warning: Citation `Cernocky' on page 13 undefined on input line 251.
+LaTeX Warning: Citation `Zemcik' on page 14 undefined on input line 277.
+
+[14]
+
+LaTeX Warning: Citation `Beran' on page 15 undefined on input line 304.
 
 
-LaTeX Warning: Citation `Herout' on page 13 undefined on input line 264.
-
-[13] [14] [15] [16]
-
-LaTeX Warning: Citation `Beran' on page 17 undefined on input line 348.
+LaTeX Warning: Citation `Cernocky' on page 15 undefined on input line 313.
 
 
-LaTeX Warning: Citation `BeranPDF' on page 17 undefined on input line 348.
+LaTeX Warning: Citation `Herout' on page 15 undefined on input line 326.
+
+[15] [16] [17] [18]
+
+LaTeX Warning: Citation `Beran' on page 19 undefined on input line 410.
 
 
-LaTeX Warning: Citation `Cernocky' on page 17 undefined on input line 348.
+LaTeX Warning: Citation `BeranPDF' on page 19 undefined on input line 410.
 
 
-LaTeX Warning: Citation `Zemcik' on page 17 undefined on input line 348.
-
-[17]
-
-LaTeX Warning: Citation `Beran' on page 18 undefined on input line 351.
+LaTeX Warning: Citation `Cernocky' on page 19 undefined on input line 410.
 
 
-LaTeX Warning: Citation `BeranPDF' on page 18 undefined on input line 351.
-
-
-LaTeX Warning: Citation `Cernocky' on page 18 undefined on input line 378.
-
-[18]
-
-LaTeX Warning: Citation `Zemcik' on page 19 undefined on input line 395.
+LaTeX Warning: Citation `Zemcik' on page 19 undefined on input line 410.
 
 [19]
+
+LaTeX Warning: Citation `Beran' on page 20 undefined on input line 413.
+
+
+LaTeX Warning: Citation `BeranPDF' on page 20 undefined on input line 413.
+
+
+LaTeX Warning: Citation `Cernocky' on page 20 undefined on input line 440.
+
+[20]
+
+LaTeX Warning: Citation `Zemcik' on page 21 undefined on input line 457.
+
+[21]
 LaTeX Font Info:    Font shape `OMS/lmr/m/it' in size <10.95> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 412.
- [20] [21]
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 474.
+ [22] [23]
 Kapitola 4.
-) (./projekt.bbl [22
+) (./projekt.bbl [24
 
 ])
 \c@ttl@toc@chapters=\count307
- (./projekt-30-prilohy-appendices.tex [23
+ (./projekt-30-prilohy-appendices.tex [25
 
 ]
 Pr\IeC {\'\i }loha A.
-[24
+[26
 
-] [25]
+] [27]
 
-LaTeX Warning: Citation `fitWeb' on page 26 undefined on input line 85.
+LaTeX Warning: Citation `fitWeb' on page 28 undefined on input line 85.
 
-[26] [27]
+[28] [29]
 Pr\IeC {\'\i }loha B.
 
-LaTeX Warning: Citation `CernockyEnglish' on page 28 undefined on input line 11
+LaTeX Warning: Citation `CernockyEnglish' on page 30 undefined on input line 11
 1.
 
-[28
+[30
 
-] [29] [30] [31]
+] [31] [32] [33]
 Pr\IeC {\'\i }loha C.
 
-LaTeX Warning: Citation `Herout' on page 32 undefined on input line 243.
+LaTeX Warning: Citation `Herout' on page 34 undefined on input line 243.
 
-[32
+[34
 
-] [33] [34] [35]
+] [35] [36] [37]
 Pr\IeC {\'\i }loha D.
-[36
+[38
 
-] <obrazky-figures/placeholder.pdf, id=521, 151.87993pt x 85.31876pt>
+] <obrazky-figures/placeholder.pdf, id=562, 151.87993pt x 85.31876pt>
 File: obrazky-figures/placeholder.pdf Graphic file (type pdf)
 
 <use obrazky-figures/placeholder.pdf>
@@ -1604,7 +1625,7 @@ Package pdftex.def Info: obrazky-figures/placeholder.pdf used on input line 434
 .
 (pdftex.def)             Requested size: 103.798pt x 58.31018pt.
 
-<obrazky-figures/keep-calm.png, id=522, 602.25pt x 702.625pt>
+<obrazky-figures/keep-calm.png, id=563, 602.25pt x 702.625pt>
 File: obrazky-figures/keep-calm.png Graphic file (type png)
 
 <use obrazky-figures/keep-calm.png>
@@ -1615,24 +1636,24 @@ Package pdftex.def Info: obrazky-figures/keep-calm.png used on input line 441.
 \openout5 = `projekt.ptc'.
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 315.
- [37 <./obrazky-figures/placeholder.pdf>]
-[38 <./obrazky-figures/keep-calm.png>]
+ [39 <./obrazky-figures/placeholder.pdf>]
+[40 <./obrazky-figures/keep-calm.png>]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 315.
  (./projekt.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 315.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 315.
 Package rerunfilecheck Info: File `projekt.out' has not changed.
-(rerunfilecheck)             Checksum: 0F30BC925EBC05460821CD040E4F0B35;4095.
+(rerunfilecheck)             Checksum: 065C1C9AB9A781C1AFC4A846BCCFC09D;4894.
 
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 22545 strings out of 493029
- 365560 string characters out of 6136233
- 436369 words of memory out of 5000000
- 25498 multiletter control sequences out of 15000+600000
+ 22572 strings out of 493029
+ 366102 string characters out of 6136233
+ 436598 words of memory out of 5000000
+ 25512 multiletter control sequences out of 15000+600000
  128909 words of font info for 119 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,15n,44p,10404b,571s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1658,10 +1679,10 @@ sr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/p
 ublic/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt9.pfb></usr/sha
 re/texmf/fonts/type1/public/lm/lmtti10.pfb></usr/share/texlive/texmf-dist/fonts
 /type1/public/amsfonts/symbols/msam10.pfb>
-Output written on projekt.pdf (41 pages, 784318 bytes).
+Output written on projekt.pdf (43 pages, 828445 bytes).
 PDF statistics:
- 667 PDF objects out of 1000 (max. 8388607)
- 573 compressed objects within 6 object streams
- 189 named destinations out of 1000 (max. 500000)
- 242 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 711 PDF objects out of 1000 (max. 8388607)
+ 610 compressed objects within 7 object streams
+ 200 named destinations out of 1000 (max. 500000)
+ 276 words of extra memory for PDF output out of 10000 (max. 10000000)
 

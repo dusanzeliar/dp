@@ -36,6 +36,10 @@ Testos: {\it Domovská stránka projektu Testos}. FIT VUT v Brne, 2018,
   [Online; navštívené 30.12.2018].
 \newline\urlprefix\url{http://testos.org}
 
+\bibitem{Sttc}
+Unmesh, G.: \emph{Selenium Testing Tools Cookbook}. Packt Publishing, 2012,
+  ISBN 1849515743, 9781849515740.
+
 \bibitem{Tgp}
 Zhao, R.; Li, Z.; Wang, Q.: Test Generation for Programs with Binary Tree
   Structure as Input. \emph{International Journal of Software Engineering and
