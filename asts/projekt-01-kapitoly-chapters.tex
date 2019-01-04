@@ -41,6 +41,7 @@ Systémové testovanie je zamerané na nájdenie chýb vo vlastnostiach plne int
 Akceptačné testovanie je proces s účelom overenia softvéru voči počiatočným stanoveným požiadavkom zákazníka jeho aktuálnych potrebieb. Často sa na ich vytváraní podieľa expert na doménu, pre ktorý sa softvér vyvýja. Zvyčajne je vytvorený zákazníkom alebo koncovým užívateľom a overuje, že dané riešenie pre užívateľa funguje \cite{Ast}.  
 
 \section{Dynamické testovanie}
+\label{Dyn_t}
 Existuje mnoho prístupov k testovaniu softvéru. Na najvyššej úrovni sa testovanie rozdeľuje na {\it statické} a {\it dynamické} \cite{Ist}. Techniky, ktoré analyzujú a skúmajú program bez nutnotsti jeho spusteniam za účelom verifikácie spadajú do skupiny statického testovania. Zahňuje posudzovanie dokumentov, kódu a jeho statickú analýzu (základná statická analýza zvyčajne prebieha na úrovni kompilátorov). Druhá skupina techník spadá do skupiny dynamického testovania, ktorá je zameraná na analýzu dynamického správania kôdu s cieľom jeho validácie. Prerekvizitou je úspešná kompilácia a spustenie kódu. Zahrňuje prácu so softvérom, kedy pre špecifické vstupy overuje a analyzuje správnosť výstupov.
 
  Dynamické testovanie môže byť ďalej rozdelené na {\it funkcionárne} a {\it nefukncionárne}. Kým funkcionárne testovanie adresuje splňenie požiadaviek, nefukcionárne je mierené na ostatné oblasti ako bezpečnosť, výkonnosť, použiteľnosť, správa pamäti a iné. Podľa znalosti kôdu sa delí na {\it black-box, white-box a grey-box} testovanie.
@@ -58,7 +59,7 @@ Techniky white-box testovania vytvárajú testovacie prípady podľa vnútornej 
 \subsection*{Grey-box testovanie}
 Mezi white-box a black-box testovaním je mnoho úrovní grey-box testovania ktoré predstavuje ich kombináciu. Testovacie prípady sú tvorené so znalosťou architektúry, algoritmov, vnútorných stavov alebo iného vysoko úrovňového popisu správania.
 \section{Testovanie založené na dátach}
-Jednoduché automatizované testovacie skripty obsahujú pevne dané testovacie dáta. Zmena týchto dát obvykle vyžaduje zmenu v zdrojovom kóde skriptu, čo môže viesť k viacerím komplikáciám. Ak je test neprehľadný, dlhý alebo neštrukturovaný, jednoduchá zmena v dátach je náročná aj pre skúsených expertov. Rovnako vzniká riziko zavedenia novej chyby. Pri tvorbe nových testov, líšiacich sa len v testovacích dátach, často dochádza k skopírovaniu kódu a následnej modifikácii dát. Pritom vzniká duplicita kódu a testovacie prípady sú ťažko udržateľné. 
+Jednoduché automatizované testovacie skripty obsahujú pevne dané testovacie dáta. Zmena týchto dát obvykle vyžaduje zmenu v zdrojovom kóde skriptu, čo môže viesť k viacerím komplikáciám. Ak je test neprehľadný, dlhý alebo neštrukturovaný, jednoduchá zmena v dátach je náročná aj pre skúsených expertov. Rovnako vzniká riziko zavedenia novej chyby. Pri tvorbe nových testov, líšiacich sa len v testovacích dátach, často dochádza k skopírovaniu kódu a následnej modifikácii dát. Pritom nastáva duplicita kódu a testovacie prípady sú ťažko udržateľné. 
 
 Pri veľkých testovacích sadách sú pre spomenuté problémy skripty s pevne danými dátami len ťažko použiteľné. {\it Testovanie založené na dátach (Data-driven testing)} je metodológia , v ktorej sa opakovane vykonávajú rovnaké kroky skriptu s použitím externých dátových zdrojov. Takéto dáta musia byť ľahko editovateľné aj testerom bez znalosti zdrojového kódu. Umožňuje mu tým sústrediť sa len na tvorbu testovacích prípadov. Výhody metodológie sú zreteľné najmä pri aplikáciách s častými zmenami funkcionality. Hlavné výhody sú nasledovné \cite{Sttc}:
 \begin{itemize}
@@ -74,24 +75,81 @@ Pri veľkých testovacích sadách sú pre spomenuté problémy skripty s pevne 
 	\label{Tdd_img}
 \end{figure*}
 \section{Editácia a uloženie testovacích dát}
-Využívané testovacie dáta sa obecne skladajú z kombinácie vstupných a očakávaných výstupných dát. Daný typ dát sa najlepšie popisuje formou {\it rozhodovacích tabuliek}. Rozhodovacia tabuľka v najjednoduchšej forme poskytuje vstupy ako aj očakávané výstupy na jednom riadku. Pri tvorbe tabuľky je dôležitá správna identifikácia všetkých vstupných dát a ich rozdelenie do {\it domén}. Výber konkrétnych hodnôt záleží od zvoleného prístupu, najčastejšie na základe {\it analýzy hraničných hodnôt} a {\it rozdelenia na evivalenčné triedy}. 
+Využívané testovacie dáta sa obecne skladajú z kombinácie vstupných a očakávaných výstupných dát. Daný typ dát sa najlepšie popisuje formou {\it rozhodovacích tabuliek}. Rozhodovacia tabuľka v najjednoduchšej forme poskytuje vstupy ako aj očakávané výstupy na jednom riadku. Pri tvorbe tabuľky je dôležitá správna identifikácia všetkých vstupných dát a ich rozdelenie do {\it domén}. Výber konkrétnych hodnôt záleží od zvoleného prístupu \cite{Ast}. Najčastejšie sa využívajú nasledovné prístupy:
+\begin{itemize}
+	\item{ \textit{Testy pokrývajúce logiku}. Testovacie prípady spoločne dosahujú všetky definované výstupy a rovnako zaručujú vykonanie všetkých častí kódu minimálne raz.}
+	\item{ \textit{Rozdelenie na ekvivalenčné triedy} \ref{ekv_tr}. 
+		Vstupy sa rozdeľujú  do tried za účelom redukcie počtu testov. Predpokladá sa, že test na jednom prvku triedy reprezentuje všetky ostatné. }
+	\item{ \textit{Analýza hraničných hodnôt}. 
+		Prístup využíva ekvivalenčné triedy, jednotlivých reprezentantov ale nevolí náhodne. Keďže najčastejšie chyby sa vyskytujú pri hraničných hodnotách, konkrétne hodnoty volí z hraničných oblastí. Zohľadňuje pritom vstupné aj výstupné dáta.}
+	\item{ \textit{Grafy príčin a dôsledkov (angl. Cause-Effect Graph)} \ref{ceg}. 
+		Vytvárajú logickú grafovú reprezentáciu mezi požiadavkami a výsledkami testov. Pomáhajú pri výbere účelných a úplných testov.}
+\end{itemize}
 
-Vzhľadom k charakteru dát sa k ich editácii prirodzene ponúka využitie tabuľkových procesorov (anglicky{\it spreadsheet}). Prácu s danými programmi obvykle zvládajú testeri ako aj ľudia z oblasti biznisu, čo uľahčuje ich rýchle zapojenie. Dané programy sa často používajú aj na jednoduchý manažment testov pre manuálne testovanie. V tomto prípade sa dáta môžu zdieľať s automatizovanými testami a predchádať tak ich zbytočnej redundancii. Príklad tabuľky je uvedený na obrázku \ref{Dt_img}. 
+
+Vzhľadom k charakteru dát sa k ich editácii prirodzene ponúka využitie tabuľkových procesorov (anglicky{\it spreadsheet}). Prácu s danými programmi obvykle zvládajú testeri ako aj ľudia z oblasti biznisu, čo uľahčuje ich rýchle zapojenie. Dané programy sa často používajú aj na jednoduchý manažment testov pre manuálne testovanie. V tomto prípade sa dáta môžu zdieľať s automatizovanými testami a predchádať tak ich zbytočnej redundancii. Príklad tabuľky je uvedený na obrázku \ref{Domtab_img}. 
 \begin{figure*}[h]\centering
 	\centering
 	\includegraphics[width=6.0in,height=2.2in]{obrazky-figures/decision_table.png}\\[1pt]
 	\caption{Príklad rozhodovacej tabuľky pre uplatnenie zľavy vytvorenej v tabuľkovom editore.}
-	\label{Dt_img}
+	\label{Domtab_img}
 \end{figure*}
 
 Formáty uloženia tabuliek spadajú do viacerých kategórií. Prostý databázový soubor (anglicky flat file database) je jednoduchá databáza (väčšinou tabulka) uložená v textovom súbore ve forme prostého textu. Obvykle používané formáty sú napríklad hodnoty oddelené čiarkami (CSV), hodnoty oddelené tabulátormi (CSV, TXT) alebo iný špecifický formát (variácie XLS). Rovnako sú stále viac využívané štrukturované formáty ako XML a Json. Súčasné programovacie jazyky majú knižnice pre ich načítanie a spracovanie, čo výrazne uľahčuje ich využitie. Prosté dabázové súbory môžu mať problémy pri výraznom rozšírovaní. Rovnako je v nich neprehľadné uchovávanie rôznych konfigurácií a verzií. 
 
 Pre veľké množstvo testovacích dát je vhodné využitie relačnej databázy. Umožňuje editáciu prostredníctvom skriptov ako aj pomocou grafických editorov.       
  
-\section{Rozdelenie vstupných domén na ekvivalenčné triedy}
-Zmyslom tvorby testovacích prípadov je nájdenie 
-\section{Rozhodovacia tabuľka}
-\section{Cause effect graph}
+
+\section{Ekvivalenčné triedy a kritéria pokrytia}
+\label{ekv_tr}
+Zmyslom tvorby testovacích prípadov je nájdenie vstupov, ktoré najlepšie pokrývajú zvolené kritérium pokrytia. V závislosti od zložitosti testovaného softvéru môže byť množstvo možných vstupov  potenciálne nekonečné, preto je zvolenie vhodnej množiny testovacích dát náročné \cite{Gst}.
+\subsection*{Rozdelenie vstupných domén na ekvivalenčné triedy}
+Kľúčová je správna identifikácia vstupných domén. {\it Vstupná doména} testovaného systému je definovaná množinou všetkých vstupných hodnôt, ktoré nadobúda. V závislosti na testovacej úrovni a testovaného artefaktu sú to obvykle parametre metód, statické a globálne premenné, objekty reprezentujúce stav systému, uživateľské vstupy a argumenty programu \cite{Ist}. Vstupná doména je následne rozdelená na {\it ekvivalenčné triedy} (označované aj ako bloky). Pojem ekvivalencie sa vzťahuje k predpokladu, že všetky hodnoty v jednej tiede obsahujú z pohľadu testovania rovnako užitočné hodnoty. Každý prvok patrí práve do jednej tiedy a jediný prvok z ekvivalenčnej množiny reprezentuje všetky prvky. Keď overíme testovací prípad pre jeden prvok, predpokladáme, že sme overili všetky prvky z danej množiny. 
+
+Pri rozpade domény \(D\) podľa rozdelenia \(q\) vznikajú vzájomne disjunktné ekvivalenčné triedy (bloky) \(B_{q}\)  definované nasledovne:
+
+\begin{center}
+	\(b_{i} \cap b_{j} = \emptyset , i \neq j ; b_{i} , b_{j} \in B_{q}\)
+\end{center}
+
+
+a spolu pokrývajú doménu \(D\)
+
+\begin{center}
+	\( \underset{b \in B_{q}}  \bigcup b = D\)
+\end{center}
+%\begin{figure*}[h]\centering
+%	\centering
+%	\includegraphics[width=6.5in,height=1.0in]{obrazky-figures/Domeny_dia.png}\\[1pt]
+%	\caption{Rozpad domén z tabuľky \ref{Domtab_img} na ekvivalenčné triedy}
+%	\label{Domdia_img}
+%\end{figure*}
+\begin{figure*}[h]\centering
+	\centering
+	\includegraphics[width=3.5in,height=2.2in]{obrazky-figures/Domeny_all_dia.png}\\[1pt]
+	\caption{Rozpad domén z tabuľky \ref{Domtab_img} na ekvivalenčné triedy}
+	\label{Domdia_img}
+\end{figure*}
+\subsection*{Kritéria pokrytia}
+Po identifikácií vstupných blokov je ďalší krok vytvorenie konkrétnej testovacej sady. Efektívne testovanie množstva blokov vyžaduje vhodný výber ich kombinácií. Stratégie zvolenia kombinácií sú dané konkrétnym krytériom pokrytia. \textit{Kritérium pokrytia (angl. Coverage criterion)} je pravidlo alebo predpis pre systematické generovanie požiadavkov na test. \textit{Pokrytie (angl. coverage)} je miera udávajúca, ako veľmi daná testovacia sada skúma testovaný systém. Obvykle sa udáva v percentách a viaže sa na konkrétne kritérium.     
+ \begin{itemize}
+ 	\item{ \textit{Kritérium pokrytia všetkých kombinácií(angl. All Combinations Coverage)}. Kritérium vyžaduje pokrytie všetkých kombinácií blokov zo všetkých domén. Testovacie prípady spoločne dosahujú všetky definované výstupy a rovnako zaručujú vykonanie všetkých častí kódu minimálne raz. Reálne sa dá použiť len pri minimálnom množstve blokov.
+ 		}
+ 	\item{ \textit{Kritérium pokrytia všetkých párov blokov (angl.  Pair-Wise Coverage)}. Kritérium vyžaduje kombináciu každého bloku každej domény s každým blokom každej inej domény, teda všetkých dvojíc blokov z rôznych domén. Generalizáciou kritéria je \textit{Kritérium pokrytia všetkých n-tíc blokov (angl. T-Wise Coverage).}  
+ 	}
+ 	\item{ \textit{Kritérium pokrytia bázových blokov (angl. Base Choice Coverage)}. Pre každú doménu je zvolený bázový blok,  zvyčajne ide o najčajstejší alebo najdôležitejší blok. Kritérium vyžaduje kombinácie všetkých bázových blokov každej domény a pokrytie každého nebázového bloku. Vhodne zvolené kombinácie bázových blokov výrazne redukujú celkový počet testovacích prípadov. Vyžší stupeň predstavuje \textit{Kritérium pokrytia viacerých bázových blokov (angl. Multiple Base Choices Coverage)} 
+ 	} 	
+ 	\item{ \textit{Kritérium pokrytia každého bloku (angl. Each Choice Coverage)}. Kritérium vyžaduje pokrytie každého bloku pre každú domén. Minimálny počet testov sa rovná počtu blokov. Kritérium nieje veľmi efektívne a samotnú voľbu testovacích prípadov necháva na testerovi. Nevyžaduje žiadnu kombináciu hodnôt a preto je považované za slabé.
+ 	}
+ \end{itemize}
+
+
+
+ 
+\section{Grafy príčin a dôsledkov}
+\label{ceg}
+Základná 
+Ekvivalenčné triedy predstavujú prvú úroveň abstrakcie vstupných dát  a sú základom pri vytváraní každej tabuľky.  
 \section{Testovanie založené na dátach}
 \section{Generovanie testovacích dát}
 {TODO {\it Kritérium pokrytia} je pravidlo alebo predpis pre systematické generovanie požiadavkov na test. {\it Pokrytie} je miera, udávajúca ako dobre je dané krytérium
