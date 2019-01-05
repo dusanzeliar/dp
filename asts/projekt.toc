@@ -7,30 +7,20 @@
 \contentsline {section}{\numberline {2.4}Edit\IeC {\'a}cia a ulo\IeC {\v z}enie testovac\IeC {\'\i }ch d\IeC {\'a}t}{6}{section.2.4}
 \contentsline {section}{\numberline {2.5}Ekvivalen\IeC {\v c}n\IeC {\'e} triedy a krit\IeC {\'e}ria pokrytia}{8}{section.2.5}
 \contentsline {section}{\numberline {2.6}Grafy pr\IeC {\'\i }\IeC {\v c}in a d\IeC {\^o}sledkov}{9}{section.2.6}
-\contentsline {section}{\numberline {2.7}Testovanie zalo\IeC {\v z}en\IeC {\'e} na d\IeC {\'a}tach}{9}{section.2.7}
-\contentsline {section}{\numberline {2.8}Generovanie testovac\IeC {\'\i }ch d\IeC {\'a}t}{9}{section.2.8}
-\contentsline {paragraph}{Prvn\IeC {\'\i } \IeC {\v c}\IeC {\'a}st -- Jak\IeC {\'y} se \IeC {\v r}e\IeC {\v s}\IeC {\'\i } probl\IeC {\'e}m? Jak\IeC {\'e} je t\IeC {\'e}ma? Jak\IeC {\'y} je c\IeC {\'\i }l textu?}{10}{section*.14}
-\contentsline {paragraph}{Druh\IeC {\'a} \IeC {\v c}\IeC {\'a}st -- Jak je probl\IeC {\'e}m vy\IeC {\v r}e\IeC {\v s}en? C\IeC {\'\i }l napln\IeC {\v e}n?}{11}{section*.15}
-\contentsline {paragraph}{T\IeC {\v r}et\IeC {\'\i } \IeC {\v c}\IeC {\'a}st -- Jak\IeC {\'e} jsou konkr\IeC {\'e}tn\IeC {\'\i } v\IeC {\'y}sledky? Jak dob\IeC {\v r}e je probl\IeC {\'e}m vy\IeC {\v r}e\IeC {\v s}en?}{11}{section*.16}
-\contentsline {paragraph}{\IeC {\v C}tvrt\IeC {\'a} \IeC {\v c}\IeC {\'a}st -- Tak\IeC {\v z}e co? \IeC {\v C}\IeC {\'\i }m je to u\IeC {\v z}ite\IeC {\v c}n\IeC {\'e} V\IeC {\v e}d\IeC {\v e} a \IeC {\v c}ten\IeC {\'a}\IeC {\v r}i?}{11}{section*.17}
-\contentsline {paragraph}{Nult\IeC {\'a} \IeC {\v c}\IeC {\'a}st -- O co jde? Kde jsme?}{12}{section*.18}
-\contentsline {chapter}{\numberline {3}Stromov\IeC {\'e} \IeC {\v s}trukt\IeC {\'u}ry}{13}{chapter.3}
+\contentsline {section}{\numberline {2.7}Testos}{11}{section.2.7}
+\contentsline {chapter}{\numberline {3}\IeC {\v S}trukturovan\IeC {\'e} d\IeC {\'a}ta}{13}{chapter.3}
 \contentsline {section}{\numberline {3.1}Grafov\IeC {\'a} reprezent\IeC {\'a}cia}{13}{section.3.1}
 \contentsline {section}{\numberline {3.2}Porovn\IeC {\'a}vanie d\IeC {\'a}t}{13}{section.3.2}
-\contentsline {section}{\numberline {3.3}Preh\IeC {\v l}ad pou\IeC {\v z}\IeC {\'\i }van\IeC {\'y}ch form\IeC {\'a}tov}{13}{section.3.3}
-\contentsline {section}{\numberline {3.4}Probl\IeC {\'e}m generovania}{13}{section.3.4}
-\contentsline {section}{\numberline {3.5}Existuj\IeC {\'u}ce gener\IeC {\'a}tory}{13}{section.3.5}
-\contentsline {section}{\numberline {3.6}Komu se p\IeC {\'\i }\IeC {\v s}e diplomka}{15}{section.3.6}
-\contentsline {section}{\numberline {3.7}Struktura diplomov\IeC {\'e} pr\IeC {\'a}ce -- P\IeC {\v e}t kapitol}{16}{section.3.7}
-\contentsline {section}{\numberline {3.8}Diplomka -- komiksov\IeC {\'a} edice}{18}{section.3.8}
-\contentsline {section}{\numberline {3.9}Jak pojmenovat kapitoly}{20}{section.3.9}
-\contentsline {section}{\numberline {3.10}Obecn\IeC {\'e} rady zku\IeC {\v s}en\IeC {\'y}ch vedouc\IeC {\'\i }ch}{22}{section.3.10}
-\contentsline {chapter}{\numberline {4}Z\IeC {\'a}v\IeC {\v e}r}{26}{chapter.4}
-\contentsline {chapter}{Literat\IeC {\'u}ra}{27}{chapter*.37}
-\contentsline {chapter}{\numberline {A}Jak pracovat s touto \IeC {\v s}ablonou}{28}{appendix.A}
-\contentsline {paragraph}{Pozor na \IeC {\v c}\IeC {\'\i }slov\IeC {\'a}n\IeC {\'\i } str\IeC {\'a}nek!}{29}{section*.39}
-\contentsline {chapter}{\numberline {B}Psan\IeC {\'\i } anglick\IeC {\'e}ho textu}{32}{appendix.B}
-\contentsline {paragraph}{\IeC {\v C}ast\IeC {\'e} chyby ve slovech}{35}{section*.50}
-\contentsline {chapter}{\numberline {C}Checklist}{36}{appendix.C}
-\contentsline {chapter}{\numberline {D}\LaTeX pro za\IeC {\v c}\IeC {\'a}te\IeC {\v c}n\IeC {\'\i }ky}{40}{appendix.D}
+\contentsline {section}{\numberline {3.3}Klasteriz\IeC {\'a}cia}{13}{section.3.3}
+\contentsline {section}{\numberline {3.4}Preh\IeC {\v l}ad pou\IeC {\v z}\IeC {\'\i }van\IeC {\'y}ch form\IeC {\'a}tov}{13}{section.3.4}
+\contentsline {section}{\numberline {3.5}Probl\IeC {\'e}m generovania}{13}{section.3.5}
+\contentsline {section}{\numberline {3.6}Existuj\IeC {\'u}ce gener\IeC {\'a}tory}{13}{section.3.6}
+\contentsline {chapter}{\numberline {4}Z\IeC {\'a}v\IeC {\v e}r}{14}{chapter.4}
+\contentsline {chapter}{Literat\IeC {\'u}ra}{15}{chapter*.12}
+\contentsline {chapter}{\numberline {A}Jak pracovat s touto \IeC {\v s}ablonou}{16}{appendix.A}
+\contentsline {paragraph}{Pozor na \IeC {\v c}\IeC {\'\i }slov\IeC {\'a}n\IeC {\'\i } str\IeC {\'a}nek!}{17}{section*.14}
+\contentsline {chapter}{\numberline {B}Psan\IeC {\'\i } anglick\IeC {\'e}ho textu}{20}{appendix.B}
+\contentsline {paragraph}{\IeC {\v C}ast\IeC {\'e} chyby ve slovech}{23}{section*.25}
+\contentsline {chapter}{\numberline {C}Checklist}{24}{appendix.C}
+\contentsline {chapter}{\numberline {D}\LaTeX pro za\IeC {\v c}\IeC {\'a}te\IeC {\v c}n\IeC {\'\i }ky}{28}{appendix.D}
 \contentsfinish 
