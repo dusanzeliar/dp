@@ -23,42 +23,42 @@ V závěrečné kapitole \ref{zaver} je pak uvedeno shrnutí toho, co se lze př
 
 \chapter{Testovanie softwaru}
 \label{testing}
-Testovanie softvéru je súbor procesov analyzujúcich softvér za účelom vyhodnotenia jeho vlastností a detekcie rozdieľov medzi aktuálnym a požadovaným stavom \cite{Standard}. Táto kapitola najskôr predstavuje základné úrovne a druhy testovania. Následne popisuje testovanie založené na dátach a s tým spojenú rozhodovaciu tabuľku. Rozoberá spôsoby tvorby a voľby dát rozhodovacej tabuľky. V závere predstavuje platfomu Testos.   
+Testovanie softvéru je súbor procesov analyzujúcich softvér za účelom vyhodnotenia jeho vlastností a detekcie rozdielov medzi aktuálnym a požadovaným stavom \cite{Standard}. Táto kapitola najskôr predstavuje základné úrovne a druhy testovania. Následne popisuje testovanie založené na dátach a s tým spojenú rozhodovaciu tabuľku. Rozoberá spôsoby tvorby a voľby dát rozhodovacej tabuľky. V závere predstavuje platformu Testos.   
 
 \bigskip
 \section{Úrovne testovania}
-Testy sú vytvárané na základe špecifikácií a požiadaviek, dizajnových artefaktov alebo zdrojového kódu. Rôzne úrovne testovania sprevádzajú rozdieľne vývojárske aktivity \cite{Ist}.
+Testy sú vytvárané na základe špecifikácií a požiadaviek dizajnových artefaktov alebo zdrojového kódu. Rôzne úrovne testovania sprevádzajú rozdielne vývojárske aktivity \cite{Ist}.
 \subsection*{Jednotkové testovanie}
 Jednotkové testovanie je zamerané na jednotky, predstavujúce najmenšie testovateľné komponenty testovaného systému. Zmyslom jednotkového testovania je validácia správania jednotky voči jej dizajnu. Zameriava sa na chyby na najnižšej úrovni. Testy vytvárajú samotný programátori počas vývoja.    
 \subsection*{Integračné testovanie}
-Integračné testovanie je cielené na korektnú komunikáciu medzi rozhraniami jednotiek, ktoré sú pre tento účel zlučované do podsystémov. Úlohou integračného testovania nie je nájdenie chýb v jednotlivých integrovaných jednotkách, ale overenie ich korektnej integrácií. Predpokladá sa, že tieto chyby boli eliminované pri jednotkovom testovaní. Odhaľuje chyby v rozhraniach a stavoch jednotiek. Pri väčšom množstve rozhraní je vhodné zvoliť špecifický prístup k integračným testom. Obvyklé stratégie sú zdola nahor, zhora dole, funkcionálna integrácia a veľký tresk \cite{Gst}. Obvykle ich tvoria vývojári alebo testeri v rámci tímu.
+Integračné testovanie je cielené na korektnú komunikáciu medzi rozhraniami jednotiek, ktoré sú pre tento účel zlučované do podsystémov. Úlohou integračného testovania nie je nájdenie chýb v jednotlivých integrovaných jednotkách, ale overenie ich korektných integrácií. Predpokladá sa, že tieto chyby boli eliminované pri jednotkovom testovaní. Odhaľuje chyby v rozhraniach a stavoch jednotiek. Pri väčšom množstve rozhraní je vhodné zvoliť špecifický prístup k integračným testom. Obvyklé stratégie sú zdola nahor, zhora nadol, funkcionálna integrácia a veľký tresk \cite{Gst}. Zvyčajne ich tvoria vývojári alebo testeri v rámci tímu.
 \subsection*{Systémové testovanie}
-Systémové testovanie je zamerané na nájdenie chýb vo vlastnostiach plne integrovaného systému. Testovaný systém je tvorený komponentami, ktoré už úspešne prešli integračnými testami. Cieľom je detekcia nekonzistentností mezi týmito komponentami a systému ako ceľku voči špecifikácií požiadavkov. Systémové testovanie vykonáva oddelená skupina testerov mimo vývojový tím. 
+Systémové testovanie je zamerané na nájdenie chýb vo vlastnostiach plne integrovaného systému. Testovaný systém je tvorený komponentami, ktoré už úspešne prešli integračnými testami. Cieľom je detekcia nekonzistentností medzi týmito komponentami a systému ako celku voči špecifikácií požiadavkov. Systémové testovanie vykonáva oddelená skupina testerov mimo vývojového tímu. 
 \subsection*{Akceptačné testovanie}
-Akceptačné testovanie je proces s účelom overenia softvéru voči počiatočným stanoveným požiadavkom zákazníka jeho aktuálnych potrebieb. Často sa na ich vytváraní podieľa expert na doménu, pre ktorý sa softvér vyvýja. Zvyčajne je vytvorený zákazníkom alebo koncovým užívateľom a overuje, že dané riešenie pre užívateľa funguje \cite{Ast}.  
+Akceptačné testovanie je proces s účelom overenia softvéru voči počiatočným stanoveným požiadavkám zákazníka a jeho aktuálnych potrieb. Často sa na ich vytváraní podieľa expert na doménu, pre ktorý sa softvér vyvíja. Zvyčajne je vytvorený zákazníkom alebo koncovým užívateľom a overuje, či dané riešenie pre užívateľa funguje \cite{Ast}.  
 
 \section{Dynamické testovanie}
 \label{Dyn_t}
-Existuje mnoho prístupov k testovaniu softvéru. Na najvyššej úrovni sa testovanie rozdeľuje na {\it statické} a {\it dynamické} \cite{Ist}. Techniky, ktoré analyzujú a skúmajú program bez nutnotsti jeho spusteniam za účelom verifikácie spadajú do skupiny statického testovania. Zahňuje posudzovanie dokumentov, kódu a jeho statickú analýzu (základná statická analýza zvyčajne prebieha na úrovni kompilátorov). Druhá skupina techník spadá do skupiny dynamického testovania, ktorá je zameraná na analýzu dynamického správania kôdu s cieľom jeho validácie. Prerekvizitou je úspešná kompilácia a spustenie kódu. Zahrňuje prácu so softvérom, kedy pre špecifické vstupy overuje a analyzuje správnosť výstupov.
+Existuje mnoho prístupov k testovaniu softvéru. Na najvyššej úrovni sa testovanie rozdeľuje na {\it statické} a {\it dynamické} \cite{Ist}. Techniky, ktoré analyzujú a skúmajú program bez nutnosti jeho spustenia za účelom verifikácie,  spadajú do skupiny statického testovania. Zahrňuje posudzovanie dokumentov, kódu a jeho statickú analýzu (základná statická analýza zvyčajne prebieha na úrovni kompilátorov). Druhá skupina techník spadá do skupiny dynamického testovania, ktorá je zameraná na analýzu dynamického správania kódu s cieľom jeho validácie. Podmienkou použitia je úspešná kompilácia a spustenie kódu. Zahrňuje prácu so softvérom, kedy pre špecifické vstupy overuje a analyzuje správnosť výstupov.
 
- Dynamické testovanie môže byť ďalej rozdelené na {\it funkcionárne} a {\it nefukncionárne}. Kým funkcionárne testovanie adresuje splňenie požiadaviek, nefukcionárne je mierené na ostatné oblasti ako bezpečnosť, výkonnosť, použiteľnosť, správa pamäti a iné. Podľa znalosti kôdu sa delí na {\it black-box, white-box a grey-box} testovanie.
- 
-  Táto práca sa zamerieva na testovanie založené na dátach, ktoré vychádza z funkcionálneho black-box testovania, ale výsledný nástroj môže byť prínosný aj pre iné prístupy.
+Dynamické testovanie môže byť ďalej rozdelené na {\it funkcionárne} a {\it nefukncionárne}. Kým funkcionárne testovanie adresuje splnenie požiadaviek, nefukcionárne je mierené na ostatné oblasti ako bezpečnosť, výkonnosť, použiteľnosť, správa pamäti a iné. Podľa znalosti kódu sa delí na {\it black-box, white-box a grey-box} testovanie.
 
-       
+Diplomová práca sa zameriava na testovanie založené na dátach, ktoré vychádza z funkcionálneho black-box testovania, ale výsledný nástroj môže byť prínosný aj pre iné prístupy.
+
+
 \subsection*{Black-box testovanie}
-{\it Black-box testovanie} (tiež známe ako {\it testovanie založené na dátach}) zoskupuje techniky tvorby testovacích prípadov na základe špecifikácií podľa analýzi popisu softvéru bez znalosti jeho vnútornej štruktúry  \cite{Ast}. Ich hlavným zameraním je odhalenie okoľností, pri ktorých sa systém správa odlišne od špecifikácií.  Testovacie dáta závisia na popise očakávaní od testovaného softvéru napríklad vo forme manuálu či popisu procesu.
+{\it Black-box testovanie} (tiež známe ako {\it testovanie založené na dátach}) zoskupuje techniky tvorby testovacích prípadov na základe špecifikácií podľa analýzylpopisu softvéru bez znalosti jeho vnútornej štruktúry  \cite{Ast}. Ich hlavným zameraním je odhalenie okolností, pri ktorých sa systém správa odlišne od špecifikácií.  Testovacie dáta závisia na popise očakávaní od testovaného softvéru, napríklad vo forme manuálu či popisu procesu.
 
-Black-box testovanie môže byť využité na všetkých úrovniach testovania. Pre nižšie úrovne jednotkového a integračného testovania sa dá využiť ako počiatočný bod pre tvorbu testov na základe dizajnu alebo aj požiadaviek. Veľmi užitočné sú na vyžších úrovniach, teda systémová a akceptačná, kde sú testy založené na požiadavkách  \cite{Gst}.
+Black-box testovanie môže byť použité na všetkých úrovniach testovania. Pre nižšie úrovne jednotkového a integračného testovania sa dá použiť ako počiatočný bod pre tvorbu testov na základe dizajnu alebo aj požiadaviek. Veľmi užitočné sú na vyšších úrovniach (systémová a akceptačná), kde sú testy založené na požiadavkách  \cite{Gst}.
 
 \subsection*{White-box testovanie}
-Techniky white-box testovania vytvárajú testovacie prípady podľa vnútornej štruktúry komponenty alebo systému. Hlavný dôraz kladú na vetvy, jednotlivé podmienky a výrazy tradične v zdrojovom kóde. Primárne sa využívajú v jednotkovom a integračnom testovaní. Všetky testovacie techniky tohoto druhu od testera vyžadujú znalosť danej štruktúry, teda programovacieho jazyka \cite{Gst}.    
+Techniky white-box testovania vytvárajú testovacie prípady podľa vnútornej štruktúry komponentu alebo systému. Hlavný dôraz kladú na vetvy, jednotlivé podmienky a výrazy tradične v zdrojovom kóde. Primárne sa využívajú v jednotkovom a integračnom testovaní. Všetky testovacie techniky tohoto druhu od testera vyžadujú znalosť danej štruktúry, teda programovacieho jazyka \cite{Gst}.    
 \subsection*{Grey-box testovanie}
-Mezi white-box a black-box testovaním je mnoho úrovní grey-box testovania ktoré predstavuje ich kombináciu. Testovacie prípady sú tvorené so znalosťou architektúry, algoritmov, vnútorných stavov alebo iného vysoko úrovňového popisu správania.
+Medzi white-box a black-box testovaním je mnoho úrovní grey-box testovania, ktoré predstavujú ich kombináciu. Testovacie prípady sú tvorené so znalosťou architektúry, algoritmov, vnútorných stavov alebo iného vysoko úrovňového popisu správania.
 \section{Testovanie založené na dátach}
-Jednoduché automatizované testovacie skripty obsahujú pevne dané testovacie dáta. Zmena týchto dát obvykle vyžaduje zmenu v zdrojovom kóde skriptu, čo môže viesť k viacerím komplikáciám. Ak je test neprehľadný, dlhý alebo neštrukturovaný, jednoduchá zmena v dátach je náročná aj pre skúsených expertov. Rovnako vzniká riziko zavedenia novej chyby. Pri tvorbe nových testov, líšiacich sa len v testovacích dátach, často dochádza k skopírovaniu kódu a následnej modifikácii dát. Pritom nastáva duplicita kódu a testovacie prípady sú ťažko udržateľné. 
+Jednoduché automatizované testovacie skripty obsahujú pevne dané testovacie dáta. Zmena týchto dát obvykle vyžaduje zmenu v zdrojovom kóde skriptu, čo môže viesť k viacerým komplikáciám. Ak je test neprehľadný, dlhý alebo neštrukturovaný, jednoduchá zmena v dátach je náročná aj pre skúsených expertov. Rovnako vzniká riziko zavedenia novej chyby. Pri tvorbe nových testov, odlišujúcich sa len v testovacích dátach, často dochádza k skopírovaniu kódu a následnej modifikácii dát. Pritom nastáva duplicita kódu a testovacie prípady sú ťažko udržateľné. 
 
-Pri veľkých testovacích sadách sú pre spomenuté problémy skripty s pevne danými dátami len ťažko použiteľné. {\it Testovanie založené na dátach (Data-driven testing)} je metodológia , v ktorej sa opakovane vykonávajú rovnaké kroky skriptu s použitím externých dátových zdrojov. Takéto dáta musia byť ľahko editovateľné aj testerom bez znalosti zdrojového kódu. Umožňuje mu tým sústrediť sa len na tvorbu testovacích prípadov. Výhody metodológie sú zreteľné najmä pri aplikáciách s častými zmenami funkcionality. Hlavné výhody sú nasledovné \cite{Sttc}:
+Pri veľkých testovacích sadách sú pre spomenuté problémy skripty s pevne danými dátami len ťažko použiteľné. {\it Testovanie založené na dátach (Data-driven testing)} je metodológia, v ktorej sa opakovane vykonávajú rovnaké kroky skriptu s použitím externých dátových zdrojov. Takéto dáta musia byť ľahko editovateľné aj testerom bez znalosti zdrojového kódu. Umožňujú mu  sústrediť sa len na tvorbu testovacích prípadov. Výhody metodológie sú zreteľné najmä pri aplikáciách s častými zmenami funkcionality. Hlavné výhody sú nasledovné \cite{Sttc}:
 \begin{itemize}
 	\item{Testy založené na dátach dosahujú vysoké pokrytie kódu testovacími prípadmi a zároveň minimalizujú množstvo kódu, ktoré je potrebné napísať a udržiavať}
 	\item{Uľahčuje vytváranie a spúšťanie veľkého množstva testovacích podmienok}
@@ -72,19 +72,19 @@ Pri veľkých testovacích sadách sú pre spomenuté problémy skripty s pevne 
 	\label{Tdd_img}
 \end{figure*}
 \section{Editácia a uloženie testovacích dát}
-Využívané testovacie dáta sa obecne skladajú z kombinácie vstupných a očakávaných výstupných dát. Daný typ dát sa najlepšie popisuje formou {\it rozhodovacích tabuliek}. Rozhodovacia tabuľka v najjednoduchšej forme poskytuje vstupy ako aj očakávané výstupy na jednom riadku. Pri tvorbe tabuľky je dôležitá správna identifikácia všetkých vstupných dát a ich rozdelenie do {\it domén}. Výber konkrétnych hodnôt záleží od zvoleného prístupu \cite{Ast}. Najčastejšie sa využívajú nasledovné prístupy:
+Využívané testovacie dáta sa všeobecne skladajú z kombinácie vstupných a očakávaných výstupných dát. Daný typ dát sa najlepšie popisuje formou {\it rozhodovacích tabuliek}. Rozhodovacia tabuľka v najjednoduchšej forme poskytuje vstupy ako aj očakávané výstupy na jednom riadku. Pri tvorbe tabuľky je dôležitá správna identifikácia všetkých vstupných dát a ich rozdelenie do {\it domén}. Výber konkrétnych hodnôt záleží od zvoleného prístupu \cite{Ast}. Najčastejšie sa využívajú nasledovné prístupy:
 \begin{itemize}
 	\item{ \textit{Testy pokrývajúce logiku}. Testovacie prípady spoločne dosahujú všetky definované výstupy a rovnako zaručujú vykonanie všetkých častí kódu minimálne raz.}
 	\item{ \textit{Rozdelenie na ekvivalenčné triedy} \ref{ekv_tr}. 
-		Vstupy sa rozdeľujú  do tried za účelom redukcie počtu testov. Predpokladá sa, že test na jednom prvku triedy reprezentuje všetky ostatné. }
+		Vstupy sa rozdeľujú  do tried za účelom redukcie počtu testov. Predpokladá sa, že test s jedným prvkom triedy reprezentuje všetky ostatné. }
 	\item{ \textit{Analýza hraničných hodnôt}. 
 		Prístup využíva ekvivalenčné triedy, jednotlivých reprezentantov ale nevolí náhodne. Keďže najčastejšie chyby sa vyskytujú pri hraničných hodnotách, konkrétne hodnoty volí z hraničných oblastí. Zohľadňuje pritom vstupné aj výstupné dáta.}
 	\item{ \textit{Grafy príčin a dôsledkov (angl. Cause-Effect Graph)} \ref{ceg}. 
-		Vytvárajú logickú grafovú reprezentáciu mezi požiadavkami a výsledkami testov. Pomáhajú pri výbere účelných a úplných testov.}
+		Vytvárajú logickú grafovú reprezentáciu medzi požiadavkami a výsledkami testov. Pomáhajú pri výbere účelných a úplných testov.}
 \end{itemize}
 
 
-Vzhľadom k charakteru dát sa k ich editácii prirodzene ponúka využitie tabuľkových procesorov (anglicky{\it spreadsheet}). Prácu s danými programmi obvykle zvládajú testeri ako aj ľudia z oblasti biznisu, čo uľahčuje ich rýchle zapojenie. Dané programy sa často používajú aj na jednoduchý manažment testov pre manuálne testovanie. V tomto prípade sa dáta môžu zdieľať s automatizovanými testami a predchádať tak ich zbytočnej redundancii. Príklad tabuľky je uvedený na obrázku \ref{Domtab_img}. 
+Vzhľadom k charakteru dát sa k ich editácii prirodzene ponúka použitie tabuľkových procesorov (anglicky{\it spreadsheet}). Prácu s danými programami obvykle zvládajú testeri, ale aj ľudia z oblasti biznisu, čo uľahčuje ich rýchle zapojenie. Dané programy sa často používajú aj na jednoduchý manažment testov pre manuálne testovanie. V tomto prípade sa dáta môžu zdieľať s automatizovanými testami a predchádzať tak ich zbytočnej redundancii. Príklad tabuľky je uvedený na obrázku \ref{Domtab_img}. 
 \begin{figure*}[h]\centering
 	\centering
 	\includegraphics[width=6.0in,height=2.2in]{obrazky-figures/decision_table.png}\\[1pt]
@@ -92,16 +92,16 @@ Vzhľadom k charakteru dát sa k ich editácii prirodzene ponúka využitie tabu
 	\label{Domtab_img}
 \end{figure*}
 
-Formáty uloženia tabuliek spadajú do viacerých kategórií. Prostý databázový soubor (anglicky flat file database) je jednoduchá databáza (väčšinou tabulka) uložená v textovom súbore ve forme prostého textu. Obvykle používané formáty sú napríklad hodnoty oddelené čiarkami (CSV), hodnoty oddelené tabulátormi (CSV, TXT) alebo iný špecifický formát (variácie XLS). Rovnako sú stále viac využívané štrukturované formáty ako XML a Json. Súčasné programovacie jazyky majú knižnice pre ich načítanie a spracovanie, čo výrazne uľahčuje ich využitie. Prosté dabázové súbory môžu mať problémy pri výraznom rozšírovaní. Rovnako je v nich neprehľadné uchovávanie rôznych konfigurácií a verzií. 
+Formáty uloženia tabuliek spadajú do viacerých kategórií. Jednoduchý databázový súbor (anglicky flat file database) je jednoduchá databáza (väčšinou tabuľka) uložená v textovom súbore ve forme krátkeho textu. Obvykle používané formáty sú napríklad hodnoty oddelené čiarkami (CSV), hodnoty oddelené tabulátormi (CSV, TXT) alebo iný špecifický formát (variácie XLS). Rovnako sú stále viac používané štrukturované formáty ako XML a Json. Súčasné programovacie jazyky majú knižnice pre ich načítanie a spracovanie, čo výrazne uľahčuje ich využitie. Jednoduché dabázové súbory môžu mať problémy pri výraznom rozširovaní. Rovnako je v nich neprehľadné uchovávanie rôznych konfigurácií a verzií. 
 
-Pre veľké množstvo testovacích dát je vhodné využitie relačnej databázy. Umožňuje editáciu prostredníctvom skriptov ako aj pomocou grafických editorov.       
- 
+Pre veľké množstvo testovacích dát je vhodné použitie relačnej databázy. Umožňuje editáciu prostredníctvom skriptov ako aj pomocou grafických editorov.       
+
 
 \section{Ekvivalenčné triedy a kritéria pokrytia}
 \label{ekv_tr}
 Zmyslom tvorby testovacích prípadov je nájdenie vstupov, ktoré najlepšie pokrývajú zvolené kritérium pokrytia. V závislosti od zložitosti testovaného softvéru môže byť množstvo možných vstupov  potenciálne nekonečné, preto je zvolenie vhodnej množiny testovacích dát náročné \cite{Gst}.
 \subsection*{Rozdelenie vstupných domén na ekvivalenčné triedy}
-Kľúčová je správna identifikácia vstupných domén. {\it Vstupná doména} testovaného systému je definovaná množinou všetkých vstupných hodnôt, ktoré nadobúda. V závislosti na testovacej úrovni a testovaného artefaktu sú to obvykle parametre metód, statické a globálne premenné, objekty reprezentujúce stav systému, uživateľské vstupy a argumenty programu \cite{Ist}. Vstupná doména je následne rozdelená na {\it ekvivalenčné triedy} (označované aj ako bloky). Pojem ekvivalencie sa vzťahuje k predpokladu, že všetky hodnoty v jednej tiede obsahujú z pohľadu testovania rovnako užitočné hodnoty. Každý prvok patrí práve do jednej tiedy a jediný prvok z ekvivalenčnej množiny reprezentuje všetky prvky. Keď overíme testovací prípad pre jeden prvok, predpokladáme, že sme overili všetky prvky z danej množiny. 
+Kľúčová je správna identifikácia vstupných domén. {\it Vstupná doména} testovaného systému je definovaná množinou všetkých vstupných hodnôt, ktoré nadobúda. V závislosti na testovacej úrovni a testovaného artefaktu sú to obvykle parametre metód, statické a globálne premenné, objekty reprezentujúce stav systému, užívateľské vstupy a argumenty programu \cite{Ist}. Vstupná doména je následne rozdelená na {\it ekvivalenčné triedy} (označované aj ako bloky). Pojem ekvivalencie sa definuje za predpokladu, že všetky hodnoty v jednej triede obsahujú z pohľadu testovania rovnako užitočné hodnoty. Každý prvok patrí práve do jednej triedy a jediný prvok z ekvivalenčnej množiny reprezentuje všetky prvky. Keď overíme testovací prípad pre jeden prvok, predpokladáme, že sme overili všetky prvky z danej množiny. 
 
 Pri rozpade domény \(D\) podľa rozdelenia \(q\) vznikajú vzájomne disjunktné ekvivalenčné triedy (bloky) \(B_{q}\)  definované nasledovne:
 
@@ -128,63 +128,63 @@ a spolu pokrývajú doménu \(D\)
 	\label{Domdia_img}
 \end{figure*}
 \subsection*{Kritéria pokrytia}
-Po identifikácií vstupných blokov je ďalší krok vytvorenie konkrétnej testovacej sady. Efektívne testovanie množstva blokov vyžaduje vhodný výber ich kombinácií. Stratégie zvolenia kombinácií sú dané konkrétnym krytériom pokrytia. \textit{Kritérium pokrytia (angl. Coverage criterion)} je pravidlo alebo predpis pre systematické generovanie požiadavkov na test. \textit{Pokrytie (angl. coverage)} je miera udávajúca, ako veľmi daná testovacia sada skúma testovaný systém. Obvykle sa udáva v percentách a viaže sa na konkrétne kritérium \cite{Ist}.     
- \begin{itemize}
- 	\item{ \textit{Kritérium pokrytia všetkých kombinácií(angl. All Combinations Coverage)}. Kritérium vyžaduje pokrytie všetkých kombinácií blokov zo všetkých domén. Testovacie prípady spoločne dosahujú všetky definované výstupy a rovnako zaručujú vykonanie všetkých častí kódu minimálne raz. Reálne sa dá použiť len pri minimálnom množstve blokov.
- 		}
- 	\item{ \textit{Kritérium pokrytia všetkých párov blokov (angl.  Pair-Wise Coverage)}. Kritérium vyžaduje kombináciu každého bloku každej domény s každým blokom každej inej domény, teda všetkých dvojíc blokov z rôznych domén. Generalizáciou kritéria je \textit{Kritérium pokrytia všetkých n-tíc blokov (angl. T-Wise Coverage).}  
- 	}
- 	\item{ \textit{Kritérium pokrytia bázových blokov (angl. Base Choice Coverage)}. Pre každú doménu je zvolený bázový blok,  zvyčajne ide o najčajstejší alebo najdôležitejší blok. Kritérium vyžaduje kombinácie všetkých bázových blokov každej domény a pokrytie každého nebázového bloku. Vhodne zvolené kombinácie bázových blokov výrazne redukujú celkový počet testovacích prípadov. Vyžší stupeň predstavuje \textit{Kritérium pokrytia viacerých bázových blokov (angl. Multiple Base Choices Coverage)} 
- 	} 	
- 	\item{ \textit{Kritérium pokrytia každého bloku (angl. Each Choice Coverage)}. Kritérium vyžaduje pokrytie každého bloku pre každú domén. Minimálny počet testov sa rovná počtu blokov. Kritérium nieje veľmi efektívne a samotnú voľbu testovacích prípadov necháva na testerovi. Nevyžaduje žiadnu kombináciu hodnôt a preto je považované za slabé.
- 	}
- \end{itemize}
+Po identifikácií vstupných blokov je ďalším krokom vytvorenie konkrétnej testovacej sady. Efektívne testovanie množstva blokov vyžaduje vhodný výber ich kombinácií. Stratégie zvolenia kombinácií sú dané konkrétnym kritériom pokrytia. \textit{Kritérium pokrytia (angl. Coverage criterion)} je pravidlo alebo predpis pre systematické generovanie požiadavkov na test. \textit{Pokrytie (angl. coverage)} je miera udávajúca, ako veľmi daná testovacia sada skúma testovaný systém. Obvykle sa udáva v percentách a viaže sa na konkrétne kritérium \cite{Ist}.     
+\begin{itemize}
+	\item{ \textit{Kritérium pokrytia všetkých kombinácií(angl. All Combinations Coverage)}. Kritérium vyžaduje pokrytie všetkých kombinácií blokov zo všetkých domén. Testovacie prípady spoločne dosahujú všetky definované výstupy a rovnako zaručujú vykonanie všetkých častí kódu minimálne raz. Reálne sa dá použiť len pri minimálnom množstve blokov.
+	}
+	\item{ \textit{Kritérium pokrytia všetkých párov blokov (angl.  Pair-Wise Coverage)}. Kritérium vyžaduje kombináciu každého bloku každej domény s každým blokom každej inej domény, teda všetkých dvojíc blokov z rôznych domén. Generalizáciou kritéria je \textit{Kritérium pokrytia všetkých n-tíc blokov (angl. T-Wise Coverage).}  
+	}
+	\item{ \textit{Kritérium pokrytia bázových blokov (angl. Base Choice Coverage)}. Pre každú doménu je zvolený bázový blok,  zvyčajne ide o najčastejší alebo najdôležitejší blok. Kritérium vyžaduje kombinácie všetkých bázových blokov každej domény a pokrytie každého nebázového bloku. Vhodne zvolené kombinácie bázových blokov výrazne redukujú celkový počet testovacích prípadov. Vyšší stupeň predstavuje \textit{Kritérium pokrytia viacerých bázových blokov (angl. Multiple Base Choices Coverage)} 
+	} 	
+	\item{ \textit{Kritérium pokrytia každého bloku (angl. Each Choice Coverage)}. Kritérium vyžaduje pokrytie každého bloku pre každú doménu. Minimálny počet testov sa rovná počtu blokov. Kritérium nie je veľmi efektívne a samotnú voľbu testovacích prípadov necháva na testerovi. Nevyžaduje žiadnu kombináciu hodnôt a preto je považované za slabé.
+	}
+\end{itemize}
 
 
 \section{Grafy príčin a dôsledkov}
 \label{ceg}
-Slabinou predstaveného prístupu založeného na rozklade na ekvivalenčné triedy je absencia kombinácií vstupov. Riešenie ponúkajú spomenuté kritéria pokrytia, ale počet kombinácií vstupných dát je napriek tomu obvykle príliš vysoký. \textit{Graf príčin a dôsledkov (angl. Cause-Effect Graphing, CEG)} je grafický spôsob znázornenia prepojenia vstupov \textit{(príčiny, angl. causes)} s nimi asociovanými výstupmi \textit{(dôsledky, angl. effects)}. Graf je formálne vyjadrenie boolovských požiadavkov a umožňuje systematický spôsob výberu podmnožiny testovacích prípadov. 
+Slabinou predstaveného prístupu založeného na rozklade na ekvivalenčné triedy je absencia kombinácií vstupov. Riešenie ponúkajú spomenuté kritéria pokrytia, ale počet kombinácií vstupných dát je napriek tomu obvykle príliš vysoký. \textit{Graf príčin a dôsledkov (angl. Cause-Effect Graphing, CEG)} je grafický spôsob znázornenia prepojenia vstupov \textit{(príčiny, angl. causes)} s nimi asociovanými výstupmi \textit{(dôsledky, angl. effects)}. Graf je formálne vyjadrenie boolovských požiadaviek a umožňuje systematický spôsob výberu podmnožiny testovacích prípadov. 
 Výhody prístupu sú nasledovné:
- \begin{itemize}
- 	\item{ Redukcia počtu kombinácií vstupov
- 	}
- 	\item{ Odhalenie nejasností a nekompletnosti špecifikácie
- 	}
- 	\item{ Zrozumiteľný a jasne čitateľný formát
- 	}
- 	\item{ Zlepšenie celkového chápania systému a jeho dôležitých faktorov 
- 	} 	
- 	\item{ Pomoc pri hľadaní zdroja konkrétnej príčiny a dôsledkov  
- 	} 	
- \end{itemize}
- Pre tvorbu testovacích prípadov je použitý nasledovný proces \cite{Ast}:
- \begin{enumerate}
- 	\item{ \textit{Rozdelenie požiadavkov do skupín primeranej veľkosti.} Veľké množstvo požiadavkov by vyústilo do príliš veľký grafu, ktorý sa stane nepoužiteľným. 
- 	}
- 	\item{ \textit{Identifikácia príčin a dôsledkov.} Príčina je priamo vstupná podmienka alebo jej ekvivalenčná trieda. Dôsledok je výstupná podmienka alebo zmena v systéme.  
- 	} 	
- 	\item{ \textit{Analýza významu požiadavkov a vytvorenie grafu príčin a dôsledkov.} 
- 	} 
- 	\item{ \textit{Identifikácia obmedzení medzi príčinami a dôsledkami.} 
- 	} 
- 	\item{ \textit{Konvertovanie grafu do rozhodovacej tabuľky.} 
- 	}  	
- 	\item{ \textit{Každý stĺpec v tabuľke reprezentuje testovací prípad.}
- 	}  		
- \end{enumerate}
+\begin{itemize}
+	\item{ Redukcia počtu kombinácií vstupov
+	}
+	\item{ Odhalenie nejasností a nekompletnosti špecifikácie
+	}
+	\item{ Zrozumiteľný a jasne čitateľný formát
+	}
+	\item{ Zlepšenie celkového chápania systému a jeho dôležitých faktorov 
+	} 	
+	\item{ Pomoc pri hľadaní zdroja konkrétnej príčiny a dôsledkov  
+	} 	
+\end{itemize}
+Pre tvorbu testovacích prípadov je použitý nasledovný proces \cite{Ast}:
+\begin{enumerate}
+	\item{ \textit{Rozdelenie požiadavkov do skupín primeranej veľkosti.} Veľké množstvo požiadaviek by vyústilo do príliš veľký grafu, ktorý sa stane nepoužiteľným. 
+	}
+	\item{ \textit{Identifikácia príčin a dôsledkov.} Príčina je priamo vstupná podmienka alebo jej ekvivalenčná trieda. Dôsledok je výstupná podmienka alebo zmena v systéme.  
+	} 	
+	\item{ \textit{Analýza významu požiadavkov a vytvorenie grafu príčin a dôsledkov.} 
+	} 
+	\item{ \textit{Identifikácia obmedzení medzi príčinami a dôsledkami.} 
+	} 
+	\item{ \textit{Konvertovanie grafu do rozhodovacej tabuľky.} 
+	}  	
+	\item{ \textit{Každý stĺpec v tabuľke reprezentuje testovací prípad.}
+	}  		
+\end{enumerate}
 
 \subsection*{Notácia grafu}
 Základná notácia grafu je ukázaná na obrázku \ref{ceg_img}. Každý uzol môže nadobúdať hodnoty 0 a 1 reprezentujúce absenciu a prítomnosť stavu. Celkovo syntax pokrýva štyri prípady \cite{Ast}: 
- \begin{itemize}
- 	\item{Funkcia \textit{identity}: ak \(a = 1\) tak \(b = 1\), inak \(b = 0\) 
- 	}
- 	\item{Funkcia \textit{NOT}: ak \(a = 1\) tak \(b = 0\), inak \(b = 1\) 
- 	}
- 	\item{Funkcia \textit{OR}: ak \(a\), \(b\) alebo \(c\) je rovné \(1\), tak \(d = 1\) 
- 	} 		
- 	\item{Funkcia \textit{AND}: ak \(a = 1\) a súčastne \(b = 1\), tak \(c = 1\), inak \(c = 0\)  
- 	} 
- \end{itemize}
+\begin{itemize}
+	\item{Funkcia \textit{identity}: ak \(a = 1\) tak \(b = 1\), inak \(b = 0\) 
+	}
+	\item{Funkcia \textit{NOT}: ak \(a = 1\) tak \(b = 0\), inak \(b = 1\) 
+	}
+	\item{Funkcia \textit{OR}: ak \(a\), \(b\) alebo \(c\) je rovné \(1\), tak \(d = 1\) 
+	} 		
+	\item{Funkcia \textit{AND}: ak \(a = 1\) a súčastne \(b = 1\), tak \(c = 1\), inak \(c = 0\)  
+	} 
+\end{itemize}
 \begin{figure*}[h]\centering
 	\centering
 	\includegraphics[width=4.5in,height=2.2in]{obrazky-figures/ceg.png}\\[1pt]
@@ -192,54 +192,92 @@ Základná notácia grafu je ukázaná na obrázku \ref{ceg_img}. Každý uzol m
 	\label{ceg_img}
 \end{figure*}
 Niektoré kombinácie medzi príčinami a dôsledkami sú neuskutočniteľné. Grafová reprezentácia na obrázku \ref{ceg_cons_img} preto umožňuje obmedzenia popísať nasledovne \cite{Ast}:
- \begin{itemize}
- 	\item{Obmedzenie \textit{E}: Najviac jeden z uzlov \(a\) a \(b\) je súčasne rovný \(1\) 
- 	}
- 	\item{Obmedzenie \textit{I}: Aspoň jeden z uzlov \(a\), \(b\) a \(c\) je vždy rovný \(1\) 
- 	}
- 	\item{Obmedzenie \textit{O}: Práve jeden z uzlov \(a\) a \(b\) je  rovný \(1\) 
- 	} 		
- 	\item{Obmedzenie \textit{R}: Aby \(a\) moholo byť \(1\), \(b\) musí byť \(1\) 
- 	}
- \end{itemize}    
- \begin{figure*}[h]\centering
- 	\centering
- 	\includegraphics[width=4.5in,height=2.2in]{obrazky-figures/ceg_cons.png}\\[1pt]
- 	\caption{Základné symboli CEG grafu \cite{Ast}.}
- 	\label{ceg_cons_img}
- \end{figure*} 
-      
-\section{Testos}
-Platforma \textit{Testos} (Test Tool Set) \cite{Testos} je projekt, ktorého hlavný cieľ je vytvorenie ucelenej sady nástrojov podporujúce automatizované testovanie softvéru. Platforma sa sústreďuje na všetky úrovňe testovania a podľa zamerania je rozdelená na oblasti:
 \begin{itemize}
- 	\item{Testovanie grafického uživateľského rozhrania \textit{(GUI)}
- 	}
- 	\item{Testovanie založené na modeloch \textit{(Model-based)}
- 	}
- 	\item{Testovanie založené na požiadavkach \textit{(Requirement-based)}
- 	} 	
- 	\item{Testovanie založené na dátach \textit{(Data-based)}
- 	} 	
- 	\item{Dynamická analýza \textit{(Execution-based)}
- 	} 	
-\end{itemize}  
-Oblasť testovania založeného na dátach aktuálne obsahuje nástroje pre generovanie testovacích dát pre databázy (náhodné dáta, kombinácie dát a ich mutácie), detektory databázovej štruktúry a detektory štrukturovaných dát. Nástroj vytvorený v tejto práci patrí do rovnakej oblasti, v rámci nej priamo komunikuje a využíva ostatné nástroje Testos.
+	\item{Obmedzenie \textit{E}: Najviac jeden z uzlov \(a\) a \(b\) je súčasne rovný \(1\) 
+	}
+	\item{Obmedzenie \textit{I}: Aspoň jeden z uzlov \(a\), \(b\) a \(c\) je vždy rovný \(1\) 
+	}
+	\item{Obmedzenie \textit{O}: Práve jeden z uzlov \(a\) a \(b\) je  rovný \(1\) 
+	} 		
+	\item{Obmedzenie \textit{R}: Aby \(a\) mohlo byť \(1\), \(b\) musí byť \(1\) 
+	}
+\end{itemize}    
+\begin{figure*}[h]\centering
+	\centering
+	\includegraphics[width=4.5in,height=2.2in]{obrázky-figures/ceg_cons.png}\\[1pt]
+	\caption{Základné symboly CEG grafu \cite{Ast}.}
+	\label{ceg_cons_img}
+\end{figure*} 
 
- \begin{figure*}[h]\centering
- 	\centering
- 	\includegraphics[width=6.0in,height=4.2in]{obrazky-figures/testos.png}\\[1pt]
- 	\caption{Platforma Testos \cite{Testos}.}
- 	\label{testos_img}
- \end{figure*} 
+\section{Testos}
+Platforma \textit{Testos} (Test Tool Set) \cite{Testos} je projekt, ktorého hlavným cieľom je vytvorenie ucelenej sady nástrojov podporujúcich automatizované testovanie softvéru. Platforma sa sústreďuje na všetky úrovne testovania a podľa zamerania je rozdelená na oblasti:
+\begin{itemize}
+	\item{Testovanie grafického užívateľského rozhrania \textit{(GUI)}
+	}
+	\item{Testovanie založené na modeloch \textit{(Model-based)}
+	}
+	\item{Testovanie založené na požiadavkách \textit{(Requirement-based)}
+	} 	
+	\item{Testovanie založené na dátach \textit{(Data-based)}
+	} 	
+	\item{Dynamická analýza \textit{(Execution-based)}
+	} 	
+\end{itemize}  
+Oblasť testovania založeného na dátach aktuálne obsahuje nástroje pre generovanie testovacích dát pre databázy (náhodné dáta, kombinácie dát a ich mutácie), detektory databázovej štruktúry a detektory štrukturovaných dát. Nástroj vytvorený v diplomovej práci patrí do rovnakej oblasti, v rámci nej priamo komunikuje a využíva ostatné nástroje Testos.
+
+\begin{figure*}[h]\centering
+	\centering
+	\includegraphics[width=6.0in,height=4.2in]{obrazky-figures/testos.png}\\[1pt]
+	\caption{Platforma Testos \cite{Testos}.}
+	\label{testos_img}
+\end{figure*} 
 
 
 \chapter{Štrukturované dáta} 
 \label{struktury}
 
-Disponovanie vhodnými \textit{testovacími dátami} je pre proces testovania rovnako dôležité ako konkrétne prípady. S narastajúcou veľkosťou a komplexnosťou systémov je získanie takýchto dát stále obtiažnejšie. V tejto kapitole je najskôj uvedená obecná charakteristika štrukturovaných dát a spôsob ich grafovej reprezentácie. Následne sa venuje metódam ich porovnania z pohľadu štruktúry a sémantiky, pričom rozoberá problematiku klasterizácie. Nakoniec poskytne prehľad používaných formátov a existujúcich riešení získania testovacích dát.
+Disponovanie vhodnými \textit{testovacími dátami} je pre proces testovania rovnako dôležité ako konkrétne prípady. S narastajúcou veľkosťou a komplexnosťou systémov je získanie takýchto dát stále obtiažnejšie. V danej kapitole je najskôr uvedená všeobecná charakteristika štrukturovaných dát a spôsob ich grafovej reprezentácie. Ďalej sa rozoberá problematika  porovnania stromových dát z pohľadu štruktúry a sémantiky s využitím klasterizácie. Nakoniec poskytne prehľad používaných formátov a existujúcich riešení získania testovacích dát.
 
-\section{Grafová reprezentácia}
-\section{Porovnávanie dát}
+
+\section{Stromové štruktúry}
+V informatike je \textit{stom} je nelineárna dátová štruktúra, ktorá predstavuje stromovú štruktúru s prepojenými uzlami. Prvky v strome sú hierarchicky usporiadané, poskytujú prirodzenú organizáciu dát a sú všadeprítomné v súborových systémoch, databázach, grafických užívateľských rozhraniach, webových stránkach a iných počítačových systémoch. 
+
+Stromová dátová štruktúra \(T\) je rekurzívne definovaná ako množina \textit{uzlov}, kde každý uzol je dátová štruktúra. Uzly sú vo vzťahu \textit{rodiča s potomkom (angl. parent-child)}, ktorý je definovaný nasledovne \cite{Dsaj}:
+\begin{itemize}
+	\item{Ak je \(T\) neprázdna, tak obsahuje práve jeden špeciálny uzol označovaný ako \textit{koreňový (angl. root)} ktorý nemá žiadny rodičovský uzol.
+	}
+	\item{Každý uzol \(v\) množiny \(T\) má priradený \textit{rodičovský} uzol \(w\). Každý uzol s rodičom \(w\) je jeho potomkom.
+	}	
+\end{itemize}
+Ďalšie prvky v strome:
+\begin{itemize}
+	\item{Dva uzly sú \textit{súrodenci (angl. siblings)}, pokiaľ majú rovnakého rodiča.
+	}
+	\item{Uzol je \textit{koncový}, ak nemá žiadnych potomkov. Externé uzly sú tiež označované ako \textit{listy(angl. leafs)}. 
+	}
+	\item{Uzol, ktorý má aspoň jedného potomka je \textit{vnútorný (angl. internal)}.
+	}	
+	\item{\textit{Podstrom (angl. subtree)} stromu \(T\) je strom \(S\) tvorený uzlom z \(T\) a všetkými jeho potomkami
+	}		
+\end{itemize} 
+\subsection*{Porovnanie stromov}
+Analýza dát je proces inšpekcie, očistenia a transformácie dát s cieľom získania užitočných informácií. S analýzou stromových dát súvisia problémy inklúzie stromov, vzdialenosť stromov, hľadanie spoločných podstromov a iné. Pre potreby nástroja vytvoreného v rámci tejto práci sú pre ich zložitosti nevhodné.
+
+Základná operácia nad každou množinou je prienik. Pri stromoch jeho hľadanie začína od koreňového uzla. Obrázok \ref{intersection_img} znázorňuje prienik troch stromov. Pre účely nástroja je zistenie prieniku schémy stromov užitočná operácia. Vstupná doména, reprezentovaná stromovou štruktúrou, umožňuje v prípade detekcie zhodných častí rôznych stromov tieto časti agregovať. Tým zmenšuje množinu príčin CEG \ref{ceg}. Obrázok \ref{intersection_img} znázorňuje redukciu množiny príčin odstránením irelevantných prvkov.
+\begin{figure*}[h]\centering
+	\centering
+	\includegraphics[width=6.0in,height=2.0in]{obrazky-figures/tree_intersection.pdf}\\[1pt]
+	\caption{Prienik troch stromov.}
+	\label{intersection_img}
+\end{figure*} 
+\begin{figure*}[h]\centering
+	\centering
+	\includegraphics[width=2.8in,height=3.0in]{obrazky-figures/cause_intersection.pdf}\\[1pt]
+	\caption{Redukcia množiny príčin CEG.}
+	\label{intersection_img}
+\end{figure*} 
+
+Porovnávanie stromov sa dá rozdeliť do troch kategórií na základe stromovej \textit{štruktúry, sémantiky} hodnôt uzlov a oboch zároveň. 
 \section{Klasterizácia}
 \section{Prehľad používaných formátov}
 \section{Problém generovania}

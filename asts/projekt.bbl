@@ -16,12 +16,10 @@ IEEE Standard for Software and System Test Documentation. \emph{IEEE Std
 Ammann, P.; Offutt, J.: \emph{\it Introduction to Software Testing}. Cambridge
   University Press, 2008, ISBN 978-0-511-39330-3.
 
-\bibitem{Dig}
-Emmi, M.; Majumdar, R.; Sen, K.: \it Dynamic Test Input Generation for Database
-  Applications. In \emph{Proceedings of the 2007 International Symposium on
-  Software Testing and Analysis}, ISSTA '07, New York, NY, USA: ACM, 2007, ISBN
-  978-1-59593-734-6, s. 151--162.
-\newline\urlprefix\url{http://doi.acm.org/10.1145/1273463.1273484}
+\bibitem{Dsaj}
+Goodrich, M.~T.; Tamassia, R.: \emph{Data Structures and Algorithms in Java}.
+  Wiley Publishing, \v{S}tvrt\'{e} vydanie, 2005, ISBN 0471738840,
+  9780471738848.
 
 \bibitem{Gst}
 Hass, A. M.~J.: \emph{\it Guide to Advanced Software Testing}. Artech House,
@@ -39,11 +37,5 @@ Testos: {\it Domovská stránka projektu Testos}. FIT VUT v Brne, 2018,
 \bibitem{Sttc}
 Unmesh, G.: \emph{Selenium Testing Tools Cookbook}. Packt Publishing, 2012,
   ISBN 1849515743, 9781849515740.
-
-\bibitem{Tgp}
-Zhao, R.; Li, Z.; Wang, Q.: Test Generation for Programs with Binary Tree
-  Structure as Input. \emph{International Journal of Software Engineering and
-  Knowledge Engineering}, ro\v{c}n\'{i}k~25, \v{c}.~07, 2015: s. 1129--1151.
-\newline\urlprefix\url{https://doi.org/10.1142/S0218194015500205}
 
 \end{thebibliography}
