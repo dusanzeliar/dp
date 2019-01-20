@@ -1,24 +1,15 @@
 %===============================================================================
 % Autoři: Michal Bidlo, Bohuslav Křena, Jaroslav Dytrych, Petr Veigend a Adam Herout 2018
 \chapter{Úvod}
+Rozmach webových aplikácií priniesol prenos veľkého množstva dát medzi rôznymi systémami. Vymieňané dáta sú obvykle štrukturované a serializované v určenom formáte. Pri testovaní takýchto systémov vzniká problém získania testovacích dát, ktoré sú zvyčajne komplexné a je problematické vytvárať ich manuálne. Analýza týchto dát je zložitá a ťažko sa o nich vytvára celkový obraz pokiaľ nieje dostupná ich detailná špecifikácia. 
 
-Tento text slouží jako ukázkový obsah šablony a současně rekapituluje nejdůležitější informace z předpisů a poskytuje další užitečné informace, které budete potřebovat pro tvorbu technické zprávy ke svojí práci. Než se šablonou budete dále pracovat, je třeba vědět, jak ji správně použít. To je stručně uvedeno v~příloze \ref{jak}.
+Cieľom tejto práce je vytvoriť nástroj pre analýzu stromových štruktúr z reálnych dát. Výsledkom analýzy je charakteristika dát, ktorá slúži na automatizovanú syntézu dát pre účely testovania. Dôraz kladie na zachovanie konkrétnych štruktúr a sémantiky ich hodnôt. Rovnako umožňuje verifikáciu vzorky dát voči vopred spracovaným dátam. 
 
-I když některým studentům pro napsání dobré diplomové práce (bakalářská práce je také diplomová -- dostává se za ni diplom) stačí znát a dodržovat oficiální formální požadavky uvedené ve směrnicích a typografické zásady, často je výhodné před započetím psaní zjistit, jaké jsou osvědčené postupy pro psaní odborného textu a jak si práci usnadnit. Někteří vedoucí svým studentům připravili popisy osvědčených postupů, které vedly k desítkám úspěšně obhájených prací. Výběr nejzajímavějších postupů, které měli autoři této šablony k~dispozici ve chvíli její tvorby, je v níže uvedených kapitolách. Má-li Váš vedoucí svoji stránku s doporučenými postupy, tyto kapitoly můžete vynechat a řídit se pokyny svého vedoucího. Pokud takovou stránku nemá, může být přečtení níže uvedeného textu vhodnou přípravou na konzultaci o plánované struktuře a náplni textu práce.
+Vytvorený nástroj je súčasťou platformy Testos \ref{Testos}, čo je projekt s cieľom vytvorenia sady nástrojov podporujúce automatizované testovanie. Nástroj aktívne využíva nástroje platformy pre detekciu sémantiky hodnôt a generovanie dát.   
 
-Diplomová práce je rozsáhlé dílo a tomu odpovídá i technická zpráva. Ne každý je schopen si sednout a jednoduše ji napsat. Je třeba vědět, kde začít a jak postupovat. Jedním z možných přístupů je začít psaním klíčových slov a abstraktu, abyste si ujasnili, co je v~práci nejdůležitější. O tom pojednává kapitola \ref{abstrakt}.
+Kapitola \ref{testing} predstavuje teoretické základy testovania softvéru, pričom sa zameriava na testovanie na dátach. Nasledujúca kapitola \ref{struktury} sa zaoberá štrukturovanými dátami a nástrojom, z ktorého táto práca vychádza. Kapitola \ref{navrh} rozoberá požiadavky na vytváraný nástroj a popisuje návrh architektúry a algoritmu. V poslednej kapitole \ref{zaver} sú zhrnuté doterajšie výsledky práce.   
 
-Po sepsání abstraktu se lze pustit do psaní samotného textu technické zprávy. Typicky si nejprve připravíme základní strukturu práce, kterou pak budeme plnit textem. Kapitola \ref{struktura} se zabývá základními informacemi a radami pro psaní odborného textu, které Vám pomohou vyhnout se začátečnickým chybám, a stanovením nadpisů kapitol a přibližných rozsahů jednotlivých částí práce. V závěru kapitoly je pak uveden přístup, kterým si lze psaní technické zprávy značně usnadnit.
-
-Diplomové práce v oblasti informačních technologií mají určitou typickou strukturu. Po~úvodu bude následovat kapitola či kapitoly zabývající se shrnutím současného stavu, který bude v následujících kapitolách zhodnocen a bude navrženo řešení, které bude implementováno a otestováno. V závěru pak budou výsledky vyhodnoceny a bude navržen budoucí vývoj. I když se názvy a rozsahy kapitol v různých pracích liší, vždy tam lze najít kapitoly odpovídající této struktuře. Kapitola \ref{kapitoly} se zabývá obsahy typických kapitol, které se v diplomových pracích z oblasti IT vyskytují. Většina studentů ve svojí práci pravděpodobně využije pouze určitou podmnožinu popsaných kapitol, která je pro jejich práci relevantní. Uvedené popisy a rady mohou pomoci jak s~rozhodnutím, zda danou kapitolu uvést, tak i~s~vnitřní strukturou a samotným obsahem kapitoly.
-
-Za závěrečnou kapitolou práce vždy následuje seznam použité literatury. Citacemi, které tento seznam tvoří, a odkazy na ně se zabývá kapitola \ref{citace}. Byť to tak nezkušený student nemusí vnímat, je seznam použité literatury a odkazy na něj pro práci zcela zásadní. Hodnocení práce s literaturou a citací tvoří jednu z důležitých částí posudku oponenta a bude-li chybět jediná položka, může to vést k hodnocení stupněm F, následnému disciplinárnímu řízení za plagiátorství a k vyloučení z nedokončeného studia. Nesprávná práce se zdroji může mít i další důsledky -- v roce 2018 stála křesla dva členy české vlády. Proto prosím citacím věnujte odpovídající pozornost. 
-
-Po dokončení textu je nutné zjistit, jaké požadavky jsou kladeny na vysokoškolskou kvalifikační práci na FIT VUT v~Brně, a dořešit případné nedostatky. Formální požadavky jsou uvedeny ve směrnicích a na webových stránkách, které jsou zmíněny v kapitole \ref{formality}. Tato kapitola obsahuje i požadované rozsahy jednotlivých typů prací a další vybrané informace z~předpisů a doporučení. V závěru kapitoly je uveden přehled nejčastějších chyb, se kterými se oponenti setkávají a kterým byste se měli vyhnout. Hodnocení formální úpravy práce je pak další z důležitých součástí posudku oponenta.
-
-Po odstranění formálních nedostatků lze práci odevzdat. Před odevzdáním práce si můžete projít kontrolní seznam (tzv. \uv{checklist}) uvedený v příloze \ref{checklist}. Samotné odevzdání listinné i elektronické verze práce je pak popsáno v kapitole \ref{odevzdani}.
-
-V závěrečné kapitole \ref{zaver} je pak uvedeno shrnutí toho, co se lze přečtením tohoto textu dozvědět, a to nejdůležitější, na co je třeba myslet před odevzdáním práce.
+     
 
 
 \chapter{Testovanie softwaru}
@@ -204,12 +195,13 @@ Niektoré kombinácie medzi príčinami a dôsledkami sú neuskutočniteľné. G
 \end{itemize}    
 \begin{figure*}[h]\centering
 	\centering
-	\includegraphics[width=4.5in,height=2.2in]{obrázky-figures/ceg_cons.png}\\[1pt]
-	\caption{Základné symboly CEG grafu \cite{Ast}.}
+	\includegraphics[width=4.5in,height=2.2in]{obrazky-figures/ceg_cons.png}\\[1pt]
+	\caption{Základné symboli CEG grafu \cite{Ast}.}
 	\label{ceg_cons_img}
-\end{figure*} 
+\end{figure*}
 
 \section{Testos}
+\label{Testos}
 Platforma \textit{Testos} (Test Tool Set) \cite{Testos} je projekt, ktorého hlavným cieľom je vytvorenie ucelenej sady nástrojov podporujúcich automatizované testovanie softvéru. Platforma sa sústreďuje na všetky úrovne testovania a podľa zamerania je rozdelená na oblasti:
 \begin{itemize}
 	\item{Testovanie grafického užívateľského rozhrania \textit{(GUI)}
@@ -236,7 +228,7 @@ Oblasť testovania založeného na dátach aktuálne obsahuje nástroje pre gene
 \chapter{Štrukturované dáta} 
 \label{struktury}
 
-Disponovanie vhodnými \textit{testovacími dátami} je pre proces testovania rovnako dôležité ako konkrétne prípady. S narastajúcou veľkosťou a komplexnosťou systémov je získanie takýchto dát stále obtiažnejšie. V danej kapitole je najskôr uvedená všeobecná charakteristika štrukturovaných dát a spôsob ich grafovej reprezentácie. Ďalej sa rozoberá problematika  porovnania stromových dát z pohľadu štruktúry a sémantiky s využitím klasterizácie. Nakoniec poskytne prehľad používaných formátov a existujúcich riešení získania testovacích dát.
+Disponovanie vhodnými \textit{testovacími dátami} je pre proces testovania rovnako dôležité ako konkrétne prípady. S narastajúcou veľkosťou a komplexnosťou systémov je získanie takýchto dát stále obtiažnejšie. V danej kapitole je najskôr uvedená všeobecná charakteristika štrukturovaných dát a spôsob ich grafovej reprezentácie. Ďalej sa rozoberá problematika  porovnania stromových dát z pohľadu štruktúry. Nakoniec poskytne prehľad používaných formátov a existujúcich riešení získania testovacích dát.
 
 
 \section{Stromové štruktúry}
@@ -277,31 +269,286 @@ Základná operácia nad každou množinou je prienik. Pri stromoch jeho hľadan
 	\label{intersection_img}
 \end{figure*} 
 
-Porovnávanie stromov sa dá rozdeliť do troch kategórií na základe stromovej \textit{štruktúry, sémantiky} hodnôt uzlov a oboch zároveň. 
-\section{Klasterizácia}
-\section{Prehľad používaných formátov}
-\section{Problém generovania}
-\section{Existujúce generátory}
+Porovnávanie stromov sa dá rozdeliť do troch kategórií na základe stromovej \textit{štruktúry, sémantiky} hodnôt uzlov a oboch zároveň. Zistenie sémantiky hodnôt v uzloch nieje predmetom tohto nástroja, ale inej komponenty vrámci platformy Testos.  
+\section{Prehľad serializačných formátov}
+Serializácia dát je proces konverzie štrukturovaných dát a objektov do formátu, ktorý umožňuje ich uloženie alebo zdieľanie. Deserializácia je k nej opačný proces, pri ktorom sa zo štrukturovaných dát v určitom formáte rekonštruujú dáta do pôvodnej formy. V niektorých prípadoch sa serializácia používa aj so zámerom zmenšenia množstva dát, ktoré sa ukladá alebo prenáša. V tejto sekcii sú predstavené dva najpoužívanejšie serializačné formáty.        
+\subsection*{XML}
+\textit{XML (Extensible Markup Language)} je \textit{značkovací jazyk} dokumentov ako aj formát výmeny dát, ktorý vychádza z princípov jazyka SGML. Značkovací jazyk je systém pre značenie častí dokumentov, ktoré indikujú jeho logickú štruktúru. XML tiež umožňuje definovať časti informácií v štrukturovanom formáte.XMLdef
+
+XML dáta sami uchovávajú ich popis a definíciu. Štruktúra je obsiahnutá v dátach, preto nieje potrebné ju najskôr vytvoriť a následne naplniť. Základný stavebný blok XML dokumentu je \textit{prvok(angl. element)}, definovaný \textit{značkami(angl. tag)}. Každý element má začínajúci a ukončujúci tag. Ku značkám môžu byť uložené metadáta vo forme \textit{atribútov(angl. attributes)}. Elementy môžu byť vnorené, čo umožňuje reprezentáciu hierarchickej štruktúry. Názov elementu popisuje jeho obsah a štruktúra jeho vzťahy k ostatným. Všetky elementy sa nachádzajú vo vonkajšom elemente, nazývanom \textit{koreňový(angl. root)}\cite{XMLdef}.      
+\subsection*{JSON}
+\textit{JSON (JavaScript Object Notation)} je formát pre výmenu dát, ktorý vychádza z podmnožiny programovacieho jazyka \textit{Javascript}. Formát JSON je odľahčený, ľahko čitateľný a zapisovateľný človekom a nezávislý na konkrétnom programovacom jazyku.
+
+JSON sa skladá z dvoch typov štruktúr, ktoré sú podporované vo väčšine súčasných programovacích jazykoch. Kolekcia dvojíc kľúč/hodnota sa nazýva \textit{objekt(object)} a je reprezentovaná v rôznych jazykoch dátovými typmi objekt, slovník, hašovacia tabuľka či asociatívne pole. Objekt začína a končí zloženými zátvorkami \textit{\{\}}, kľúč má dátový typ \textit{reťazec(string)}. Druhá štruktúra je zoradený zoznam hodnôt \textit{pole(array)}. Pole je ohraničené hranatými zátvorkami \textit{[]}, jednotlivé hodnoty sú oddelené čiarkou. Dátové typy hodnôt sú \textit{string, number, object, array, true, false, null}\cite{JSONdef}.  
+
+\subsection*{Porovnanie XML a JSON}
+XML vytvorené v roku 1998 bolo dlho jedinou voľbou pre serializáciu a prenos dát. JSON bol špecifikovaný v roku 2001 a spočiatku sa ťažko presadzoval. Postupne sa dominancia XML znižuje a JSON sa stáva preferovanejší formát pre webové rozhrania \ref{xml_vs_json_img}. Hlavné rozdiely formátov sú uvedené v nasledujúcich bodoch.
+\begin{itemize}
+	\item{\textbf{Kompaktnosť}: JSON pri popise dát využíva menej znakov a preto je výsledný súbor pri serializácii rovnakých dát menší.
+	}	
+	\item{\textbf{Čitateľnosť}: Oba formáty sú dobre čitateľné človekom. JSON je jednoduchší a obsahuje menej zbytočných dát, preto je ľahšie čitateľný.
+	}
+	\item{\textbf{Rýchlosť spracovania}: Softvér na spracovanie XML dát je pomalší a ťažkopádny. Knižnice pracujúce s DOM pre zložitosť XML spracovania a jeho mnohovravnosti často využívajú nadmerné množstvo pamäte.
+	}
+	\item{\textbf{Štruktúra}: JSON dáta majú štruktúru mapy a XML dáta stromu. JSON dáta môžu byť prevedené na XML, opačne to bez straty informácii nieje možné.
+	}	
+	\item{\textbf{Typické dáta}: JSON je lepší pre prenos dát. XML je lepší pre prenos dokumentov, kde poskytuje rôzne pohľady na rovnaké dáta.
+	}	
+\end{itemize}   
+\begin{figure*}[h]\centering
+	\centering
+	\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{obrazky-figures/xml_vs_json.png}\\[1pt]
+	\caption{Graf znázorňujúci trendy vyhľadávania google pre výrazy  ‘json api’ (červené) a ‘xml api’ (modré).\cite{XMLvsJSONusage}}
+	\label{xml_vs_json_img}
+\end{figure*} 
+\section{Existujúce riešenia}
+Práca nadväzuje na nástroj \textit{StructAnalyser}, ktorý vznikol v rámci bakalárskej práce. Nástroj je unikátny z pohľadu analýzy vzoriek dát bez znalosti ich štruktúry pre testovacie účely. Iné nástroje sú odlišné v účeloch a znalostiach, preto stanoveným požiadavkám nevyhovujú. 
+
+Existujúce nástroje vykonávajúce analýzu vzoriek dát sa dajú rozdeliť do kategórií podľa účelu analýzy a znalosti štruktúry dát. Najviac zastúpené nástroje sú zamerané na zisk biznis informácií so znalosťou ich štruktúry. Typicky pracujú s dátovými skladmi. Druhú početnú skupinu predstavujú nástroje pre účely testovania so znalosťou štruktúry dát a zdrojového kódu programu. Platforma Testos má nástroje pre analýzu databázy a následné generovanie testovacích dát. Nutná podmienka ich použitia je znalosť štruktúry databázy.
+\subsection*{Nástroj StructAnalyser}
+Nástroj \textit{StructAnalyser} analyzuje štrukturované dáta v často používaných formátoch JSON a XML. Slúži k agregácií vstupných dát, určeniu váhy jednotlivých dátových entít a abstrakcii skalárnych hodnôt. Rovnako podporuje generáciu dát podobných vstupným vzorkám.
+Nástroj je implementovaný ako konzolová aplikácia. Pri spustení vyžaduje nasledovné argumenty\cite{BPgen}.
+\begin{itemize}
+	\item{\textit{-input}: Súbor so vstupnými dátami. Dáta sú v jednom z formátov XML, JSON alebo YAML.
+	}	
+	\item{\textit{-c}: Konfiguračný súbor vo formáte JSON. Obsahuje špecifikáciu abstrakcie hodnôt a uzlov. Parameter je voliteľný.
+	}	
+	\item{\textit{-g}: Prepínač udávajúci výstup vo forme generovaných hodnôt. Prijíma čislo určujúce počet vygenerovaných entít.
+	}	
+\end{itemize} 
+\begin{figure*}[h]\centering
+	\centering
+	\includegraphics[width=3.0in,keepaspectratio]{obrazky-figures/struct_analyser.png}\\[1pt]
+	\caption{Proces spracovania vstupných dát na výstupnú analýzu nástroja \textit{StructAnalyser}\cite{BPgen}}
+	\label{structa_img}
+\end{figure*} 
+Nástroj funguje samostatne a poskytuje očakávanú funkcionalitu, ale má aj slabé stránky.
+\begin{enumerate}
+	\item{Chýbajúca \textit{spolupráca s nástrojmi v rámci platformy Testos.} Detektory implementované v nástroji sú obmedzené a ťažko rozšíritelne. Rovnako obmedzený je aj generátor dátových entít. V platforme Testos sú nástroje na generáciu a detekciu .   
+	}
+	\item{\textit{Štatistická abstrakcia konkrétnych štruktúr.} Nástroj neuchováva vzory štruktúr spracovaných dát. Generátor následne vytvára vzorky dát len na základe štatistiky, čím dochádza k generovaniu nezmyselných štruktúr.
+	} 	
+	\item{\textit{Abstrakcia hodnôt koncových uzlov.} Obmedzené detektory dôkladne neskúmajú hodnoty. Rovnako sa stráca informácia o hodnotách uzlov konkrétnych štruktúr.
+	} 
+		
+\end{enumerate}
 
 
 
+\chapter{Návrh nástroja pre detekciu závislostí stromových štruktúr}
+\label{navrh}
+V prvej časti tejto kapitoly sú spracované požiadavky na vytváraný nástroj pre detekciu závislostí stromových štruktúr pre účely testovania. Druhá časť obsahuje návrh architektúry a postup detekcie závislostí. Vytváraný nástroj je ďalej tiež referovaný pod názvom \textit{TSD analyser}.
+\begin{figure*}[h]\centering
+	\centering
+	\includegraphics[width=3.0in,keepaspectratio]{obrazky-figures/testos_components.pdf}\\[1pt]
+	\caption{Diagram nástrojov platformy Testos, ktoré budú využité pri procese analýzy a generovania testovacích stromových dát.}
+	\label{testos_nastroje}
+\end{figure*} 
+\section{Špecifikácia požiadaviek}
+Táto podkapitola obsahuje požiadavky na výsledný nástroj \textit{TSD analyser}. V tabuľke \ref{rq_general} najskôr uvádza základné požiadavky, ktoré sú ďalej podrobnejšie špecifikované. 
 
+%\section{Špecifikácia požiadavkov}
+\begin{table}[hbt]
+	\centering
+	\label{rq_general}
+	\begin{tabular}{|p{0.8cm}|p{15cm}|}
+		\hline
+		\textbf{Číslo} & \textbf{Popis požiadaviek} \\ \hline
+		1 & Nástroj spolupracuje s ďalšími nástrojmi Testos \\ \hline
+		2 & Nástroj vytvára abstrakciu štruktúr vzoriek dát \\ \hline
+		3 & Nástroj získa abstrakciu sémantiky hodnôt uzlov \\ \hline
+		4 & Nástroj umožňuje simultánne skúmať dvojíc vzoriek stromových štruktúr \\ \hline
+		5 & Nástroj vytvára predpis pre generovanie dát \\ \hline
+		6 & Nástroj overí zhodu vzorky dát s vopred vytvorenou abstrakciou \\ \hline
+		7 & Nástroj poskytuje grafické rozhranie pre vizualizáciu abstrakcie  \\ \hline
+	\end{tabular}
+	\caption{Tabuľka základných požiadaviek}
+\end{table}
 
-\chapter{Závěr}
+\subsection*{Nástroj spolupracuje s ďalšími nástrojmi Testos}
+Implementovaný nástroj implicitne komunikuje s ďalšími nástrojmi prostredníctvom REST API. Vzhľadom k komunikácii v rámci uzatvorenej platformy nieje vyžadovaná autentifikácia. Nástroj sám iniciuje spojenia a zadáva požiadavky ostatným nástrojom.   
+\subsection*{Nástroj vytvára abstrakciu štruktúr vzoriek dát}
+Abstrakcia štruktúry stromových dát tvorí jadro nástroja. Požiadavky na abstrakciu štruktúr sú v tabuľke \ref{rq_2}.  
+\begin{table}[hbt]
+	\centering
+	\label{rq_2}
+	\begin{tabular}{|p{0.8cm}|p{15cm}|}
+		\hline
+		\textbf{Číslo} & \textbf{Popis požiadaviek} \\ \hline
+		2.1 & Nástroj obsahuje univerzálnu stromovú štruktúru \\ \hline
+		2.2 & Nástroj uchováva všetky vzory štruktúr vzoriek dát \\ \hline
+		2.3 & Nástroj zaznamenáva štatistiku výskytu unikátnych vzorov štruktúr \\ \hline	
+		2.4 & Nástroj identifikuje spoločné časti štruktúr  \\ \hline
+		2.5 & Nástroj agreguje polia koncových uzlov  \\ \hline	
+		2.6 & Nástroj umožňuje uložiť a znovu obnoviť stav štruktúry  \\ \hline	
+	\end{tabular}
+	\caption{Tabuľka detailných požiadaviek abstrakcie štruktúr}
+\end{table}
+\subsection*{Nástroj získa abstrakciu sémantiky hodnôt uzlov}
+Nástroj na abstrakciu sémantiky množiny hodnôt uzlov využíva komponentu platformy Testos. Detektor poskytuje sémantické informácie spolu s mieru príslušnosti.  Konkrétny význam týchto informácií nástroj nepozná.
+\subsection*{Nástroj umožňuje simultánne skúmať dvojíc vzoriek stromových štruktúr}
+Nástroj umožňuje súčasnú analýzu dvoch skupín vzoriek dát. Takéto dáta typicky predstavujú dvojicu vstupných a výstupných dát. Nástroj uchováva dvojice vzorov štruktúr, ktoré k sebe patria. 
+\subsection*{Nástroj vytvára predpis pre generovanie dát}
+Nástroj na syntézu testovacích dát využíva Testos komponentu Generator, pre ktorý vytvorí predpis štruktúry a sémantiky.
+\subsection*{Nástroj overí zhodu vzorky dát s vopred vytvorenou abstrakciou}
+Nástroj overí zhodu štruktúru vzorky s uloženými vzormi štruktúr. Rovnako overí jej sémantickú zhodu. 
+\subsection*{Nástroj poskytuje grafické rozhranie pre vizualizáciu abstrakcie}
+Grafické rozhranie poskytuje interaktívnu voľbu zobrazenia úrovne abstrakcie. Rovnako umožňuje editáciu sémantiky uzlov a výber konkrétnych vzorov pre generátor.  
+\section{Architektúra}
+%\section{Abstraktná stromová štruktúra}
+V tejto podkapitole je rozobraný popis činností vyvíjaného nástroja \textit{TSD analyser}. Sú tu predstavené základné komponenty a ich kroky behu programu. 
+\begin{figure*}[h]\centering
+	\centering
+	\includegraphics[width=6.0in,keepaspectratio]{obrazky-figures/architecture.pdf}\\[1pt]
+	\caption{Diagram komponent nástroja TSD analyser spolu s nástrojmi Detector a Generator.}
+	\label{architecture_img}
+\end{figure*} 
+\subsection*{DataLoader}
+Komponenta DataLoader vykonáva načítanie vstupných vzoriek dát. Na vstupe má súbor so serializovanými dátami vo formáte XML alebo JSON. V prípade, že sú vo formáte XML, je tento formát konvertovaný na JSON. Samotné načítanie sa vykoná po žiadosti komponenty \textit{Preprocessor} o ďalšie dáta. 
+\subsection*{Processor}
+Processor je zodpovedný za prenos dát od DataLoader do ďalšej komponenty AbstractTree. Podľa nastavenia buď aktualizuje abstraktný strom, alebo overí zhodu vzorky dát s vopred vytvorenou abstrakciou. 
+\subsection*{AbstractTree}
+Jadrom celého nástroja je komponenta AbstractTree, uchovávajúca univerzálnu stromovú štruktúru \textit{Abstraktný dátový strom}. Je vytvorená zo všetkých štruktúr vzoriek a skladá sa z uzlov AbstractNode.   
+\subsection*{ValueStore}
+ValueStore uchováva všetky hodnoty uzlov vzoriek. Uložené dáta sa skladajú zo štvorice \textit{ID vzorky, ID uzla, dátového typu a hodnoty.}  
+\subsection*{Pattern}
+Komponenta Pattern skladuje všetky unikátne vzory štruktúr. Popis týchto vzorov sa odkazuje na abstraktný strom.
+\subsection*{Controller}
+Controller načítava konfiguračný súbor a je zodpovedný za jej distribúciu do ostatných komponent. Tiež riadi a synchronizuje činnosti ostatný komponent.
+\subsection*{GUI}
+GUI zabezpečuje grafickú vizualizáciu abstraktného stromu.  
+\section{Abstraktný dátový strom} 
+Algoritmus abstrakcie štruktúry vzoriek dát je založený na \textit{abstraktnom dátovom strome(ďalej označovaný AT).} Všetky vstupné vzorky sú prevedené do jedného hlavného AT. Tento strom sa skladá z \textit{abstraktných uzlov(ďalej označované AN)}. Táto kapitola obsahuje charakteristiku AT, AN a hlavné algoritmy, ktoré s nimi pracujú. 
+\subsection*{Abstraktný uzol}
+Abstraktné uzly \textit{AN} obsahujú tri typy informácií. Jednotlivé typy vychádzajú zo štruktúry jazyka JSON.   
+\begin{enumerate}
+	\item{\textbf{Object}: Uzol obsahuje nezoradenú množinu AN uzlov. 
+	}	
+	\item{\textbf{Value}: Uzol obsahuje konkrétnu hodnotu. 
+	}	
+	\item{\textbf{Array}: Uzol obsahuje množinu referencií na AT. 
+	}		
+	
+\end{enumerate}
+\subsection*{Algoritmus abstrakcie} 
+Komponenty majú nasledovné množiny, ktoré algoritmus využíva pri abstrakcii.
+\begin{itemize}
+	\item{AbstractTree: \textit{Množina unikátnych vzorov}. Vzor je tvorený množinou uzlov \textit{AN} a ich typov.
+	}
+	\item{DataStore: \textit{Množina konkrétnych hodnôt AN typu Value}. Každý uzol z týchto uzlov si uchováva všetky konkrétne hodnoty, ktoré vo vzorkách dát nadobudol.
+	}			
+	\item{Pattern: \textit{Množina vzorov AT}. Konkrétny vzor dát sa skladá z množiny vzorov AT, ktoré ho tvoria.
+	}					
+\end{itemize}
+Základné kroky algoritmu:
+\begin{enumerate}
+
+	\item{ Pomocou prehľadávania stromu do hĺbky \textit{(DFS)} získaj množinu uzlov \textit{AN} aktuálneho stromu \textit{AT}. Pri uzloch typu \textit{Array} ďalej nepokračuj v ich prehľadávaní a zaznamenaj ich.
+	}
+	\subitem{ Pokiaľ sa narazí na nový uzol, ktorý \textit{AT} ešte neobsahuje, vytvor ho. 
+	}
+	\subitem{ Pokiaľ je \textit{AN} typu \textit{Value}, ulož jeho konkrétnu hodnotu.
+	}	
+	\item{ Množina získaných uzlov vytvára konkrétny vzor daného \textit{AT}. Porovnaj tento vzor so všetkými doposiaľ získanými. Ulož identifikáciu získaného vzoru do množiny vzorov konkrétnej vzorky dát.
+	} 
+	\subitem{ Pokiaľ sa získaný vzor ešte nevyskytol, ulož ho medzi vzory daného stromu.
+	}			
+	\item{ Vyber prvý uzol z množiny \textit{Array}. Pokiaľ pre daný uzol ešte nebol vytvorený \textit{AT}, vytvor ho.   
+	} 
+	\item{ Pre každú hodnotu z vybraného \textit{Array} uzlu opakuj kroky 1 a 2. Ulož si identifikátory vzorov pre všetky hodnoty z uzla. } 
+	}
+	\item{ S množinou \textit{Array} uzlov nového stromu opakuj krok 3.} 
+}  	  	
+	\item{ Všetky uzly \textit{Array} boli spracované. Výsledné vzory všetkých \textit{AT} stromov zoraď ulož do komponenty Pattern.}
+	}  	
+	\item{ Hodnoty uzlov v komponente \textit{StoreData} odošli do nástroja \textit{Detector}. Ulož získané sémantické informácie.
+	}
+}  		
+\end{enumerate}
+\subsection*{Príklad práce algoritmu} 
+Príklad práce algoritmu nad tromi vzorkami dát.\\
+Vzorka dát č. 1:
+\begin{lstlisting}
+{"A":{"B":"ValueB","C":["ValueD",{"E":{"F":"ValueF"}}]}}
+\end{lstlisting}
+Vzorka dát č. 2:
+\begin{lstlisting}
+{"A":{"B":"ValueB2","G":"ValueG"}}
+\end{lstlisting}
+Vzorka dát č. 3:
+\begin{lstlisting}
+{"A":{"B":"ValueB","C":["VD","VD"]}}
+\end{lstlisting}
+Stav \textit{AT} po spracovaní prvej vzorky dát zobrazuje diagram \ref{alg_example1_img}. Číslo za identifikátorom \textit{AN} udáva jeho typ. Stav množín je v tabuľke \ref{alg_example1_tab}.
+\begin{table}[hbt]
+	\centering
+	\label{alg_example1_tab}
+	\begin{tabular}{|p{1.8cm}|p{12cm}|}
+		\hline
+		\textbf{Množina} & \textbf{Prvky} \\ \hline
+		AT1 vzory & 	\(ATP1 = \{R1.1, A.1, B.2, C.3\}\) \\ \hline
+		AT2 vzory & 	\(ATP2 = \{R2.2\}, ATP3 = \{R2.1, E.1, F.2 \}  \)   \\ \hline		
+		Pattern & 	\(CP1 = \{ATP1, ATP2, ATP3\}  \)   \\ \hline
+		DataStore & 	\(B.2 = \{"ValueB"\}, R2.2 = \{"ValueD"\}, F.2 = \{"ValueF"\}  \)   \\ \hline						
+
+	\end{tabular}
+	\caption{Tabuľka zobrazujúca stav množín po spracovaní prvého vzorku dát}
+\end{table} 
+\begin{figure*}[h]\centering
+	\centering
+	\includegraphics[width=3.0in,keepaspectratio]{obrazky-figures/alg_example1.pdf}\\[1pt]
+	\caption{Stromy \textit{AT} a ich \textit{AN} uzly po spracovaní prvej vzorky dát.}
+	\label{alg_example1_img}
+\end{figure*} 
+
+Stav \textit{AT} po spracovaní druhej vzorky dát zobrazuje diagram \ref{alg_example2_img}. Stav množín je v tabuľke \ref{alg_example2_tab} sa zmenil len pre množiny DataStore a Pattern. 
+\begin{table}[hbt]
+	\centering
+	\label{alg_example2_tab}
+	\begin{tabular}{|L{1.8cm}|p{12cm}|}
+		\hline
+		\textbf{Množina} & \textbf{Prvky} \\ \hline
+		AT1 vzory & \(ATP1 = \{R1.1, A.1, B.2, C.3\}, ATP4 = \{R1.1, A.1, B.2, G.2\}\)\\ \hline
+		AT2 vzory & \(ATP2 = \{R2.2\}, ATP3 = \{R2.1, E.1, F.2 \}\)\\ \hline		
+		Pattern &\(CP1 = \{ATP1, ATP2, ATP3\}, CP2 = \{ATP4\} \)\\ \hline
+		DataStore & 	\(B.2 = \{"ValueB", "ValueB2"\}, G.2 = \{"ValueG"\},\)\\
+		 &  \(R2.2 = \{"ValueD"\}, F.2 = \{"ValueF"\}  \)   \\ \hline						
+		
+	\end{tabular}
+	\caption{Tabuľka zobrazujúca stav množín po spracovaní druhého vzorku dát}
+\end{table} 
+\begin{figure*}[h]\centering
+	\centering
+	\includegraphics[width=4.0in,keepaspectratio]{obrazky-figures/alg_example2.pdf}\\[1pt]
+	\caption{Stromy \textit{AT} a ich \textit{AN} uzly po spracovaní druhej a tretej vzorky dát.}
+	\label{alg_example2_img}
+\end{figure*} 
+\caption{Diagram komponent nástroja TSD analyser spolu s nástrojmi Detector a Generator.}
+Stav \textit{AT} po spracovaní tretej vzorky dát sa nezmenil, ostáva rovnaký ako v \ref{alg_example2_img}. Finálny stav množín je v tabuľke \ref{alg_example3_tab}. 
+\begin{table}[hbt]
+	\centering
+	\label{alg_example3_tab}
+	\begin{tabular}{|p{1.8cm}|p{12cm}|}
+		\hline
+		\textbf{Množina} & \textbf{Prvky} \\ \hline
+		AT1 vzory & 	\(ATP1 = \{R1.1, A.1, B.2, C.3\}, ATP4 = \{R1.1, A.1, B.2, G.2\}\)   \\ \hline
+		AT2 vzory & 	\(ATP2 = \{R2.2\}, ATP3 = \{R2.1, E.1, F.2 \}  \)   \\ \hline		
+		Pattern &\(CP1 = \{ATP1, ATP2, ATP3\}, CP2 = \{ATP4\},\)\\ 
+		& \(CP3 = \{ATP1, ATP2\}  \)\\ \hline
+		DataStore & 	\(B.2 = \{"ValueB", "ValueB2", "ValueB"\}, G.2 = \{"ValueG"\},\)\\
+		&  \(R2.2 = \{"ValueD", "VD", "VD"\}, F.2 = \{"ValueF"\}  \)   \\ \hline								
+		
+	\end{tabular}
+	\caption{Tabuľka zobrazujúca stav množín po spracovaní tretieho vzorku dát}
+\end{table} 
+  
+%\chapter{Implementácia nástroja tsd-detector}
+\chapter{Záver}
 \label{zaver}
 
-V tomto textu bylo uvedeno, jak začít s tvorbou bakalářské či diplomové práce, napsat abstrakt, připravit základní strukturu práce a co uvést do jednotlivých kapitol. Při tom bylo vysvětleno, že bakalářská práce je také diplomová a je třeba k ní přistupovat stejně zodpovědným způsobem. Následně byla věnována pozornost bibliografickým citacím a formální stránce práce. V předposlední kapitole jsou uvedeny důležité informace k odevzdání v listinné i v elektronické podobě.
+V tejto práci boli najskôr predstavené princípy testovania založeného na dátach. Ďalej charakterizuje štrukturované dáta a ich formáty. Na základe analýzy požiadavok bol navrhnutý základ algoritmu pre automatizovanú detekciu závislostí vzoriek reálnych dát pre účely generovania testovacích dát, ktoré sú svojou štruktúrou a významom podobné reálnym vzorkám.  
 
-Je třeba zdůraznit, že diplomová práce je unikátním individuálním dílem, které vzniká pod vedením zkušeného odborníka. Ať už je v této šabloně uvedeno cokoliv, závazné jsou pouze oficiální pokyny na stránkách fakulty. Pro konkrétní diplomovou práci je potřeba vždy zvažovat, co je z výše uvedeného textu relevantní a co nikoliv a řídit se především pokyny vedoucího, který rozumí dané problematice a je tak schopen poskytnout ty nejlepší rady, co lze k práci dostat.
-
-I přes velkou snahu nikdy není možné do šablony zahrnout všechny prvky, co budou při tvorbě práce potřeba, a zaručit, že po doplnění textu, obrázků, literatury apod. bude vše v~pořádku pro všechny možné diplomové práce. Bude-li někde delší text, než se předpokládalo, a zalomí-li se na dva řádky, bude-li v literatuře položka, se kterou nebyl otestován využitý styl, a v dalších případech může být výsledek neuspokojivý a může být potřeba do~šablony zasáhnout a chybu, která se projevuje třeba jen pro jednu práci ze sta, opravit. Výsledné PDF a následně i vytištěnou papírovou verzi je tedy vždy nutné pečlivě zkontrolovat a~nespoléhat se na to, že \uv{tohle přece generuje šablona, tak to musí být správně}. Najdete-li v šabloně nějaké chyby nebo budete-li mít návrhy na její vylepěšení, napište prosím na e-mail sablona@fit.vutbr.cz a pomozte nám s jejím vylepšováním. Veškeré připomínky a návrhy jsou vítány.
-
-S kontrolou výsledku může výrazně pomoci vedoucí práce. Nelze však předpokládat, že vedoucí poslední noc před odevzdáním bude sedět v práci připraven na kontrolu desítek stran textu. Proto je nutné mít vše připravené v předstihu a konzultovat průběžně. Kritický pohled vedoucího pak umožní dosažení kvalitního výsledku a aktivita, kterou uvidí, přispěje k pozitivnímu hodnocení práce z jeho strany.
-
-Na závěr bych jménem autorů této šablony popřál všem, kteří právě vytvářejí svoje diplomové práce nebo se k jejich tvorbě připravují, úspěšné dokončení a obhájení práce.
-
-
-
+Nasledovná práca spočíva vo vytvorení detailného návrhu a následnej implementácii nástroja, jeho otestovanie a integráciu v rámci Testos. 
 
 
 

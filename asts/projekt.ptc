@@ -1,26 +1,22 @@
 \select@language {slovak}
 \contentsline {chapter}{\numberline {1}\IeC {\'U}vod}{2}{chapter.1}
-\contentsline {chapter}{\numberline {2}Testovanie softwaru}{4}{chapter.2}
-\contentsline {section}{\numberline {2.1}\IeC {\'U}rovne testovania}{4}{section.2.1}
-\contentsline {section}{\numberline {2.2}Dynamick\IeC {\'e} testovanie}{5}{section.2.2}
-\contentsline {section}{\numberline {2.3}Testovanie zalo\IeC {\v z}en\IeC {\'e} na d\IeC {\'a}tach}{6}{section.2.3}
-\contentsline {section}{\numberline {2.4}Edit\IeC {\'a}cia a ulo\IeC {\v z}enie testovac\IeC {\'\i }ch d\IeC {\'a}t}{6}{section.2.4}
-\contentsline {section}{\numberline {2.5}Ekvivalen\IeC {\v c}n\IeC {\'e} triedy a krit\IeC {\'e}ria pokrytia}{8}{section.2.5}
-\contentsline {section}{\numberline {2.6}Grafy pr\IeC {\'\i }\IeC {\v c}in a d\IeC {\^o}sledkov}{9}{section.2.6}
-\contentsline {section}{\numberline {2.7}Testos}{11}{section.2.7}
-\contentsline {chapter}{\numberline {3}\IeC {\v S}trukturovan\IeC {\'e} d\IeC {\'a}ta}{13}{chapter.3}
-\contentsline {section}{\numberline {3.1}Stromov\IeC {\'e} \IeC {\v s}trukt\IeC {\'u}ry}{13}{section.3.1}
-\contentsline {section}{\numberline {3.2}Klasteriz\IeC {\'a}cia}{15}{section.3.2}
-\contentsline {section}{\numberline {3.3}Preh\IeC {\v l}ad pou\IeC {\v z}\IeC {\'\i }van\IeC {\'y}ch form\IeC {\'a}tov}{15}{section.3.3}
-\contentsline {section}{\numberline {3.4}Probl\IeC {\'e}m generovania}{15}{section.3.4}
-\contentsline {section}{\numberline {3.5}Existuj\IeC {\'u}ce gener\IeC {\'a}tory}{15}{section.3.5}
-\contentsline {chapter}{\numberline {4}Z\IeC {\'a}v\IeC {\v e}r}{16}{chapter.4}
-\contentsline {chapter}{Literat\IeC {\'u}ra}{17}{chapter*.13}
+\contentsline {chapter}{\numberline {2}Testovanie softwaru}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}\IeC {\'U}rovne testovania}{3}{section.2.1}
+\contentsline {section}{\numberline {2.2}Dynamick\IeC {\'e} testovanie}{4}{section.2.2}
+\contentsline {section}{\numberline {2.3}Testovanie zalo\IeC {\v z}en\IeC {\'e} na d\IeC {\'a}tach}{5}{section.2.3}
+\contentsline {section}{\numberline {2.4}Edit\IeC {\'a}cia a ulo\IeC {\v z}enie testovac\IeC {\'\i }ch d\IeC {\'a}t}{5}{section.2.4}
+\contentsline {section}{\numberline {2.5}Ekvivalen\IeC {\v c}n\IeC {\'e} triedy a krit\IeC {\'e}ria pokrytia}{7}{section.2.5}
+\contentsline {section}{\numberline {2.6}Grafy pr\IeC {\'\i }\IeC {\v c}in a d\IeC {\^o}sledkov}{8}{section.2.6}
+\contentsline {section}{\numberline {2.7}Testos}{10}{section.2.7}
+\contentsline {chapter}{\numberline {3}\IeC {\v S}trukturovan\IeC {\'e} d\IeC {\'a}ta}{12}{chapter.3}
+\contentsline {section}{\numberline {3.1}Stromov\IeC {\'e} \IeC {\v s}trukt\IeC {\'u}ry}{12}{section.3.1}
+\contentsline {section}{\numberline {3.2}Preh\IeC {\v l}ad serializa\IeC {\v c}n\IeC {\'y}ch form\IeC {\'a}tov}{14}{section.3.2}
+\contentsline {section}{\numberline {3.3}Existuj\IeC {\'u}ce rie\IeC {\v s}enia}{15}{section.3.3}
+\contentsline {chapter}{\numberline {4}N\IeC {\'a}vrh n\IeC {\'a}stroja pre detekciu z\IeC {\'a}vislost\IeC {\'\i } stromov\IeC {\'y}ch \IeC {\v s}trukt\IeC {\'u}r}{17}{chapter.4}
+\contentsline {section}{\numberline {4.1}\IeC {\v S}pecifik\IeC {\'a}cia po\IeC {\v z}iadaviek}{17}{section.4.1}
+\contentsline {section}{\numberline {4.2}Architekt\IeC {\'u}ra}{19}{section.4.2}
+\contentsline {section}{\numberline {4.3}Abstraktn\IeC {\'y} d\IeC {\'a}tov\IeC {\'y} strom}{20}{section.4.3}
+\contentsline {chapter}{\numberline {5}Z\IeC {\'a}ver}{23}{chapter.5}
+\contentsline {chapter}{Literat\IeC {\'u}ra}{24}{chapter*.34}
 \ttl@starttoc {chapters@1}
-\contentsline {chapter}{\numberline {A}Jak pracovat s touto \IeC {\v s}ablonou}{18}{appendix.A}
-\contentsline {paragraph}{Pozor na \IeC {\v c}\IeC {\'\i }slov\IeC {\'a}n\IeC {\'\i } str\IeC {\'a}nek!}{19}{section*.15}
-\contentsline {chapter}{\numberline {B}Psan\IeC {\'\i } anglick\IeC {\'e}ho textu}{22}{appendix.B}
-\contentsline {paragraph}{\IeC {\v C}ast\IeC {\'e} chyby ve slovech}{25}{section*.26}
-\contentsline {chapter}{\numberline {C}Checklist}{26}{appendix.C}
-\contentsline {chapter}{\numberline {D}\LaTeX pro za\IeC {\v c}\IeC {\'a}te\IeC {\v c}n\IeC {\'\i }ky}{30}{appendix.D}
 \contentsfinish 

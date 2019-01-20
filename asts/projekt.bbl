@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\urlprefix}{URL }
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -8,8 +8,12 @@
 \providecommand{\selectlanguage}[1]{\relax}
 \providecommand{\eprint}[2][]{\url{#2}}
 
+\bibitem{JSONdef}
+{\it JSON}. [Online; navštívené 30.12.2018].
+\newline\urlprefix\url{https://www.json.org/}
+
 \bibitem{Standard}
-IEEE Standard for Software and System Test Documentation. \emph{IEEE Std
+\it IEEE Standard for Software and System Test Documentation. \emph{IEEE Std
   829-2008}, July 2008: s. 1--150, \doi{10.1109/IEEESTD.2008.4578383}.
 
 \bibitem{Ist}
@@ -17,17 +21,26 @@ Ammann, P.; Offutt, J.: \emph{\it Introduction to Software Testing}. Cambridge
   University Press, 2008, ISBN 978-0-511-39330-3.
 
 \bibitem{Dsaj}
-Goodrich, M.~T.; Tamassia, R.: \emph{Data Structures and Algorithms in Java}.
-  Wiley Publishing, \v{S}tvrt\'{e} vydanie, 2005, ISBN 0471738840,
+Goodrich, M.~T.; Tamassia, R.: \emph{\it Data Structures and Algorithms in
+  Java}. Wiley Publishing, \v{S}tvrt\'{e} vydanie, 2005, ISBN 0471738840,
   9780471738848.
 
 \bibitem{Gst}
 Hass, A. M.~J.: \emph{\it Guide to Advanced Software Testing}. Artech House,
   2008, ISBN 978-1-59693-285-2.
 
+\bibitem{XMLvsJSONusage}
+Kågström, J.: {\it JSON REST API }. 2016, [Online; navštívené 30.12.2018].
+\newline\urlprefix\url{http://blog.uclassify.com/json-rest-api/}
+
 \bibitem{Ast}
 Myers, G.~J.; Badgett, T.; Sandler, C.: \emph{\it The Art of Software Testing}.
   John Wiley, \it 3 vydanie, 2011, ISBN 978-1-118-03196-4.
+
+\bibitem{XMLdef}
+Rouse, M.: {\it XML (Extensible Markup Language) }. 2014, [Online;
+  navštívené 30.12.2018].
+\newline\urlprefix\url{https://searchmicroservices.techtarget.com/definition/XML-Extensible-Markup-Language}
 
 \bibitem{Testos}
 Testos: {\it Domovská stránka projektu Testos}. FIT VUT v Brne, 2018,
@@ -35,7 +48,13 @@ Testos: {\it Domovská stránka projektu Testos}. FIT VUT v Brne, 2018,
 \newline\urlprefix\url{http://testos.org}
 
 \bibitem{Sttc}
-Unmesh, G.: \emph{Selenium Testing Tools Cookbook}. Packt Publishing, 2012,
+Unmesh, G.: \emph{\it Selenium Testing Tools Cookbook}. Packt Publishing, 2012,
   ISBN 1849515743, 9781849515740.
+
+\bibitem{BPgen}
+Znojil, O.: \emph{\it Detektory strukturovaných dat pro účely testování
+  software}. Bakalárska práca, Vysoké učenie technické v Brne, Fakulta
+  informačných technológií, 2018.
+\newline\urlprefix\url{https://www.vutbr.cz/www_base/zav_prace_soubor_verejne.php?file_id=180688}
 
 \end{thebibliography}
